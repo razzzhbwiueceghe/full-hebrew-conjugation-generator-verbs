@@ -37,7 +37,7 @@ else:
 
 
 
-#gizrot below with each binyan
+#mishkalim below with each binyan
 #consider to use regex instead of a bunch of dictionaries in consideration of efal and efol
 pealim = {
     "paal": {
@@ -54,21 +54,21 @@ pealim = {
             "hi": f"{root1}{xolammalei}{root2}{segol}{root3}{segol}{tav}",},
 
             ("כותבים",): {
-            "anaxnu": f"{root1}{xolammalei}{root2}{shva}{root3}{chirik}{yod}{memsofit}",
-            "atem": f"{root1}{xolammalei}{root2}{shva}{root3}{chirik}{yod}{memsofit}",
-            "hem": f"{root1}{xolammalei}{root2}{shva}{root3}{chirik}{yod}{memsofit}",},
+            "anaxnu": f"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+            "atem": f"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+            "hem": f"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",},
 
             ("כותבות",): {
             "anaxnu":f"{root1}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
-            "aten":f"{root1}{xolammalei}{root2}{shva}{root3}{chirik}{tav}",
-            "hen":f"{root1}{xolammalei}{root2}{shva}{root3}{chirik}{tav}",}
+            "aten":f"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{tav}",
+            "hen":f"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{tav}",}
             }
 
             },
 
             "avar":{
             ("כתבתי",):{
-            "ani":f"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{chirik}{yod}"
+            "ani":f"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
             ("כתבת",):{
@@ -104,45 +104,45 @@ pealim = {
 
             "atid":{
             "efal":{
-            ("אבלע"):{{
+            ("אבלע"):{
             "ani":f"{alef}{segol}{root1}{shva}{root2}{patax}{root3}",
 
             ("תבלע"):{
-            "ata":f"{tav_with_mapik}{xireq}{root1}{shva}{patax}{root3}",
+            "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{patax}{root3}",
 
             ("תבלעי"):{
             "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
 
-            ("תבלוע"):{
-            "hu":f"{yod}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
+            ("יבלע"):{
+            "hu":f"{yod}{xiriq}{root1}{shva}{root2}{patax}{root3}",
 
-            ("יבלוע"):{
+            ("תבלע"):{
             "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod},"
 
             ("נבלע"):{
-            "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
+            "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{patax}{root3}",
 
             ("תבלעו"):{
-            "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
             ("תבלעו"):{
-            "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
             ("יבלעו"):{
-            "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
             ("יבלעו"):{
-            "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
 
 
 
             "efol":,
             ("אכתוב"):{
-            "ani":f"{alef}{sehol}{root1}{shva}{root2}{xolammalei}{root3}",
+            "ani":f"{alef}{segol}{root1}{shva}{root2}{xolammalei}{root3}",
 
             ("תכתוב"):{
-            "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolam}{root3}",
+            "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
             ("תכתבי"):{
             "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
@@ -151,38 +151,38 @@ pealim = {
             "hu":f"{yod}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
             ("תכתוב"):{
-            "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolam}{root3},"
+            "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3},"
 
             ("נכתוב"):{
             "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
             ("תכתבו"):{
-            "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
             ("תכתבו"):{
-            "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
             ("יכתבו"):{
-            "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
             ("יכתבו"):{
-            "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shuruq}",
+            "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-
-
+efal_or_efol = {0, ""}
+        if root1 = "U+05DC", root2 = "U+05DE", root3 = "U+05D3"
 
 
         "paal_lamed_hey_yod":{
         "hoveh":{
         ("קונה",): {
-        "ani": f"{root1}{xolammalei}{root2}{hey}",
-        "ata": f"{root1}{xolammalei}{root2}{hey}",
-        "hu": f"{root1}{xolammalei}{root2}{hey}",},
+        "ani": f"{root1}{xolammalei}{root2}{segol}{hey}",
+        "ata": f"{root1}{xolammalei}{root2}{segol}{hey}",
+        "hu": f"{root1}{xolammalei}{root2}{segol}{hey}",},
 
         ("קונה",): {
-        "ani": f"{root1}{xolammalei}{root2}{hey}",
-        "at": f"{root1}{xolammalei}{root2}{hey}",
-        "hi": f"{root1}{xolammalei}{root2}{hey}",},
+        "ani": f"{root1}{xolammalei}{root2}{qametz}{hey}",
+        "at": f"{root1}{xolammalei}{root2}{qametz}{hey}",
+        "hi": f"{root1}{xolammalei}{root2}{qametz}{hey}",},
 
         ("קונים",): {
         "anaxnu": f"{root1}{xolammalei}{root2}{xiriq}{yod}{memsofit}",
@@ -199,36 +199,36 @@ pealim = {
 
         "avar":{
         ("קניתי",):{
-        "ani":f""
+        "ani":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{xiriq}{yod}"
         }
         ,
         ("קנית",):{
-        "ata":f""
+        "ata":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{qametz}"
         },
         ("קנית"):{
-        "at":f""
+        "at":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{shva}"
         },
         ("קנה"):{
-        "hu":f""
+        "hu":f"{root1}{qametz}{root2}{qametz}{hey}"
 
         },
         ("קנתה"):{
-        "hi":f""
+        "hi":f"{root1}{qametz}{root2}{shva}{tav}{qametz}{hey}"
         },
         ("קנינו"):{
-        "anaxnu":f""
+        "anaxnu":f"{root1}{qametz}{root2}{xiriq}{yod}{nun}{shureq}"
         },
         ("קניתם"):{
-        "atem":f""
+        "atem":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{memsofit}"
         },
         ("קניתן"):{
-        "aten":f""
+        "aten":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{nunsofit}"
         },
         ("קנו"):{
-        "hem":f""
+        "hem":f"{root1}{qametz}{root2}{shureq}"
         },
         ("קנו"):{
-        "hen":f""
+        "hen":f"{root1}{qametz}{root2}{shureq}"
         },
 
 
@@ -236,37 +236,34 @@ pealim = {
         "atid":{
 
         ("אקנה"):{
-        "ani":f"",
+        "ani":f"{alef}{segol}{root1}{shva}{root2}{segol}{hey}",
 
         ("תקנה"):{
-        "ata":f"",
+        "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
         ("תקני"):{
-        "at":f"",
+        "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xiriq}{yod}",
 
         ("יקנה"):{
-        "hu":f"",
+        "hu":f"{yod}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
         ("תקנה"):{
-        "hi":f","
+        "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
         ("נקנה"):{
-        "anaxnu":f"",
+        "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
         ("תקנו"):{
-        "atem":f"",
+        "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shureq}",
 
         ("תקנו"):{
-        "aten":f"",
+        "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shureq}",
 
         ("יקנו"):{
-        "hem":f"",
+        "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shureq}",
 
         ("יקנו"):{
-        "hen":f"",
-
-
-
+        "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shureq}",
 
 
 
@@ -276,60 +273,60 @@ pealim = {
         "paal_pey_yod":{
         "hoveh":{
         ("יורד",): {
-        "ani": f"",
-        "ata": f"",
-        "hu": f"",},
+        "ani": f"{yod}{xolammalei}{root2}{tzerei}{root3}",
+        "ata": f"{yod}{xolammalei}{root2}{tzerei}{root3}",
+        "hu": f"{yod}{xolammalei}{root2}{tzerei}{root3}",},
 
         ("יורדת",): {
-        "ani": f"",
-        "at": f"",
-        "hi": f"",},
+        "ani": f"{yod}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+        "at": f"{yod}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+        "hi": f"{yod}{xolammalei}{root2}{segol}{root3}{segol}{tav}",},
 
         ("יורדים",): {
-        "anaxnu": f"",
-        "atem": f"",
-        "hem": f"",},
+        "anaxnu": f"{yod}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+        "atem": f"{yod}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+        "hem": f"{yod}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",},
 
         ("יורדות",): {
-        "anaxnu":f"",
-        "aten":f"",
-        "hen":f"",}
+        "anaxnu":f"{yod}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
+        "aten":f"{yod}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
+        "hen":f"{yod}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",}
         }
 
         },
 
         "avar":{
         ("ירדתי",):{
-        "ani":f""
+        "ani":f"{yod}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}"
         }
         ,
         ("ירדת",):{
-        "ata":f""
+        "ata":f"{yod}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{qametz}"
         },
         ("ירדת"):{
-        "at":f"
+        "at":f"{yod}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{shva}",
         },
         ("ירד"):{
-        "hu":f""
+        "hu":f"{yod}{qametz}{root2}{patax}{root3}"
 
         },
         ("ירדה"):{
-        "hi":f""
+        "hi":f"{yod}{qametz}{root2}{shva}{root3}{qametz}{hey}"
         },
         ("ירדנו"):{
-        "anaxnu":f""
+        "anaxnu":f"{yod}{qametz}{root2}{patax}{root3}{shva}{nun}{shureq}"
         },
         ("ירדתם"):{
-        "atem":f""
+        "atem":f"{yod}{qametz}{root2}{patax}{root3}{tav_with_mapik}{segol}{memsofit}"
         },
         ("ירדתן"):{
-        "aten":f""
+        "aten":f"{yod}{qametz}{root2}{patax}{root3}{tav_with_mapik}{segol}{nunsofit}"
         },
         ("ירדו"):{
-        "hem":f""
+        "hem":f"{yod}{qametz}{root2}{shva}{root3}{shureq}"
         },
         ("ירדו"):{
-        "hen":f""
+        "hen":f"{yod}{qametz}{root2}{shva}{root3}{shureq}"
         },
 
 
@@ -337,34 +334,34 @@ pealim = {
         "atid":{
 
         ("ארד"):{
-        "ani":f"",
+        "ani":f"{alef}{tzerei}{root2}{tzerei}{root3}",
 
         ("תרד"):{
-        "ata":f"",
+        "ata":f"{tav_with_mapik}{tzerei}{root1}{tzerei}{root3}",
 
         ("תרדי"):{
-        "at":f"",
+        "at":f"{tav_with_mapik}{tzerei}{root2}{shva}{root3}{xiriq}{yod}",
 
         ("ירד"):{
-        "hu":f"",
+        "hu":f"{yod}{tzerei}{root2}{tzerei}{root3}",
 
         ("תרד"):{
-        "hi":f","
+        "hi":f"{tav_with_mapik}{tzerei}{root1}{tzerei}{root3}",
 
         ("נרד"):{
-        "anaxnu":f"",
+        "anaxnu":f"{nun}{tzerei}{root2}{tzerei}{root3}",
 
         ("תרדו"):{
-        "atem":f"",
+        "atem":f"{tav_with_mapik}{tzerei}{root2}{shva}{root3}{shureq}",
 
         ("תרדו"):{
-        "aten":f"",
+        "aten":f"{tav_with_mapik}{tzerei}{root2}{shva}{root3}{shureq}",
 
         ("ירדו"):{
-        "hem":f"",
+        "hem":f"{yod}{tzerei}{root2}{shva}{root3}{shureq}",
 
         ("ירדו"):{
-        "hen":f"",
+        "hen":f"{yod}{tzerei}{root2}{shva}{root3}{shureq}",
 
 
 
@@ -375,60 +372,60 @@ pealim = {
     "paal_lamed_alef":{
     "hoveh":{
     ("קורא",): {
-    "ani": f"",
-    "ata": f"",
-    "hu": f"",},
+    "ani": f"{root1}{xolammalei}{root2}{tzerei}{alef}",
+    "ata": f"{root1}{xolammalei}{root2}{tzerei}{alef}",
+    "hu": f"{root1}{xolammalei}{root2}{tzerei}{alef}",},
 
     ("קוראת",): {
-    "ani": f"",
-    "at": f"",
-    "hi": f"",},
+    "ani": f"{root1}{xolammalei}{root2}{tzerei}{alef}{tav}",
+    "at": f"{root1}{xolammalei}{root2}{tzerei}{alef}{tav}",
+    "hi": f"{root1}{xolammalei}{root2}{tzerei}{alef}{tav}",},
 
     ("קוראים",): {
-    "anaxnu": f"",
-    "atem": f"",
-    "hem": f"",},
+    "anaxnu": f"{root1}{xolammalei}{root2}{shva}{alef}{xiriq}{yod}{memsofit}",
+    "atem": f"{root1}{xolammalei}{root2}{shva}{alef}{xiriq}{yod}{memsofit}",
+    "hem": f"{root1}{xolammalei}{root2}{shva}{alef}{xiriq}{yod}{memsofit}",},
 
     ("קוראות",): {
-    "anaxnu":f"",
-    "aten":f"",
-    "hen":f"",}
+    "anaxnu":f"{root1}{xolammalei}{root2}{shva}{alef}{xolammalei}{tav}",
+    "aten":f"{root1}{xolammalei}{root2}{shva}{alef}{xolammalei}{tav}",
+    "hen":f"{root1}{xolammalei}{root2}{shva}{alef}{xolammalei}{tav}",}
     }
 
     },
 
     "avar":{
     ("קראתי",):{
-    "ani":f""
+    "ani":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{xiriq}{yod}"
     }
     ,
     ("קראת",):{
-    "ata":f""
+    "ata":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{qametz}"
     },
     ("קראת"):{
-    "at":f""
+    "at":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{shva}"
     },
     ("קרא"):{
-    "hu":f""
+    "hu":f"{root1}{qametz}{root2}{qametz}{alef}"
 
     },
     ("קראה"):{
-    "hi":f""
+    "hi":f"{root1}{qametz}{root2}{shva}{alef}{qametz}{hey}"
     },
     ("קראנו"):{
-    "anaxnu":f""
+    "anaxnu":f"{root1}{qametz}{root2}{qametz}{alef}{nun}{shureq}"
     },
     ("קראתם"):{
-    "atem":f""
+    "atem":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{segol}{memsofit}"
     },
     ("קראתן"):{
-    "aten":f""
+    "aten":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{segol}{nunsofit}"
     },
     ("קראו"):{
-    "hem":f""
+    "hem":f"{root1}{qametz}{root2}{shva}{alef}{shureq}"
     },
     ("קראו"):{
-    "hen":f""
+    "hen":f"{root1}{qametz}{root2}{shva}{alef}{shureq}"
     },
 
 
@@ -436,34 +433,34 @@ pealim = {
     "atid":{
 
     ("אקרא"):{
-    "ani":f"",
+    "ani":f"{alef}{segol}{root1}{shva}{root2}{qametz}{alef}",
 
     ("תקרא"):{
-    "ata":f"",
+    "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
     ("תקראי"):{
-    "at":f"",
+    "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{alef}{xiriq}{yod}",
 
     ("יקרא"):{
-    "hu":f"",
+    "hu":f"{yod}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
     ("תקרא"):{
-    "hi":f","
+    "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
     ("נקרא"):{
-    "anaxnu":f"",
+    "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
     ("תקראו"):{
-    "atem":f"",
+    "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
     ("תקראו"):{
-    "aten":f"",
+    "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
     ("יקראו"):{
-    "hem":f"",
+    "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
     ("יקראו"):{
-    "hen":f"",
+    "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
 
 
@@ -476,9 +473,9 @@ pealim = {
 paal pey_nun:
 "hoveh":{
 ("נותן",): {
-"ani": f"",
-"ata": f"",
-"hu": f"",},
+"ani": f"{root1}{xolammalei}{root2}{tzerei}{root3}",
+"ata": f"{root1}{xolammalei}{root2}{tzerei}{root3}",
+"hu": f"{root1}{xolammalei}{root2}{tzerei}{root3}",},
 
 ("נותנת",): {
 "ani": f"",
@@ -531,7 +528,7 @@ paal pey_nun:
 ("נתנו"):{
 "hen":f""
 },
-}
+
 
 
 "atid":{
@@ -628,7 +625,6 @@ paal pey_aleph:
 ("אכלו"):{
 "hen":f""
 },
-}
 
 
 "atid":{
@@ -850,7 +846,7 @@ piel_shlemim:
 ("כיתבו"):{
 "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -945,7 +941,7 @@ piel_merubayim:
 ("שיכתבו"):{
 "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1041,7 +1037,7 @@ piel_lamed_alef
 ("מילאו"):{
 "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1135,7 +1131,7 @@ piel_lamed_hey_yod
 ("שינו"):{
 "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1230,7 +1226,7 @@ hifil_shlemim
 ("הרגישו"):{
 "hen":f""
 },
-}
+
 
 
 "atid":{
@@ -1326,7 +1322,7 @@ hifil_pey_yod
 ("הורידו"):{
 "hen":f"{hey}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1359,7 +1355,7 @@ hifil_pey_yod
 "hem":f"{yod}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",
 
 ("יורידו"):{
-"hen":f"{yod}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",
+"hen":f"{yod}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",}
 
 
 
@@ -1421,7 +1417,7 @@ hifil_pey_nun
 ("הנהיגו"):{
 "hen":f"{hey}{xiriq}{nun}{root2}{xiriq}{yod}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1517,7 +1513,7 @@ hifil_ayin_vav_yod
 ("הבינו"):{
 "hen":f"{hey}{root2}{xiriq}{yod}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1614,7 +1610,7 @@ hifil_lamed_hey_yod
 ("הרצו"):{
 "hen":f"{hey}{root1}{root2}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1709,7 +1705,7 @@ hifil_lamed_hey_yod
 ("הסבו"):{
 "hen":f"{hey}{root1}{root2}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -1802,7 +1798,7 @@ hitpael_regil
 ("התרגשו"):{
 "hen":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{segol}"
 },
-}
+
 
 
 "atid":{
@@ -1898,7 +1894,6 @@ hitpael_samech_tav
 ("הסתלקו"):{
 "hen":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{shureq}"
 },
-}
 
 
 "atid":{
@@ -1993,7 +1988,7 @@ hitpael_ayin_yod_vav
 ("התעוררו"):{
 "hen":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2089,7 +2084,6 @@ hitpael_lamed_alef
 ("התמצאו"):{
 "hen":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{shureq}"
 },
-}
 
 
 "atid":{
@@ -2122,7 +2116,7 @@ hitpael_lamed_alef
 "hem":f"{yod}{tav}{root1}{root2}{root3}{shureq}",
 
 ("יתמצאו"):{
-"hen":f{yod}{tav}{root1}{root2}{root3}{shureq}",}
+"hen":f"{yod}{tav}{root1}{root2}{root3}{shureq}",}
 
 
 
@@ -2185,7 +2179,7 @@ hitpael_tzadi_tet
 ("הצטערו"):{
 "hen":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2281,7 +2275,7 @@ hitpael_zayin_dalet
 ("הזדקנו"):{
 "hen":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2377,7 +2371,6 @@ hitpael_shin_sin_tav
 ("השתפרו"):{
 "hen":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}"
 },
-}
 
 
 "atid":{
@@ -2472,7 +2465,7 @@ hitpael_lamed_hey_yod
 ("התגלו"):{
 "hen":f"{hey}{xiriq}{tav}{root1}{root2}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2566,7 +2559,7 @@ hitpael_merubayim
 ("התבלבלו"):{
 "hen":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2662,7 +2655,7 @@ nifal_shlemim
 ("ניכנסו"):{
 "hen":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2756,7 +2749,7 @@ nifal_pey_yod
 ("נולדו"):{
 "hen":f"{nun}{xolammalei}{root2}{root3}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2850,7 +2843,6 @@ nifal_lamed_hey_yod
 ("נראו"):{
 "hen":f"{nun}{xiriq}{root1}{root2}{shureq}"
 },
-}
 
 
 "atid":{
@@ -2943,7 +2935,7 @@ nifal_lamed_alef
 ("נמצאו"):{
 "hen":f"{nun}{xiriq}{root1}{root2}{alef}{shureq}"
 },
-}
+
 
 
 "atid":{
@@ -2988,7 +2980,7 @@ tav_with_mapik = "U+05EA U+05BC"
 vav = "U+05D5"
 tav = "U+05EA"
 
-
+#if root3 ends with a final letter option then must become a sofit
 
 shin_sin = "U+05E9"
 tzadi = "U+05E6"
@@ -3034,9 +3026,71 @@ pual
 }
 
 },
+#maybe make regex for pual and hufal
+כותבתי
+כותבת
+כותבת
+כותב
+כותבה
+כותבנו
+כותבתם
+כותבתן
+כותבו
+
+אכותב
+תכותב
+תכותבי
+יכותב
+תכותב
+נכותב
+תכותבו
+תכותבו
+יכותבו
+
+
+
+hufal
+
+מוכתב
+מוכתבת
+מוכתבים
+מוכתבות
+
+הוכתבתי
+הוכתבת
+הוכבת
+הוכתב
+הוכתבה
+הוכתבנו
+הוכתבתם
+הוכתבתן
+הוכתבו
+הוכתבו
+
+אוכתב
+תוכתב
+תוכתביֿ
+יוכתב
+תוכתב
+נוכתב
+תוכתבו
+ֿתוכתבו
+יוכתבו
+יוכתבו
+
+#draw out fst for vowelization changes before coding it
+
+
+#review purpose of fsa and how it may be applicable/not
+
+
+
+
+
+
 
 "avar":{
-("כיו",):{
+("",):{
 "ani":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{xiriq}{yod}"
 }
 ,
@@ -3104,6 +3158,8 @@ pual
 "hen":f"{yod}{yod}{root1}{root2}{alef}{shureq}",
 
 hufal
+
+
 
 
 #look up regex with hebrew letters, also use checker for input for shoresh to make sure its correct and if not then send back an error
