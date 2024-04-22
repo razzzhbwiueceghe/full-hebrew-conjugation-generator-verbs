@@ -1613,6 +1613,7 @@ def render_conjugate (shoresh, binyan, zman, shem_guf):
 
 
 
+#for every ani in the atid and avar zman make it consistent to have aniz and anin 
 
 #need to make a regex to interpret input shoresh to which mishkal
 
