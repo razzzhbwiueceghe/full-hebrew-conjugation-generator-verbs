@@ -12,17 +12,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# Your Hebrew verb conjugator function
-def conjugate_verb(verb):
-    # Implement your conjugator logic here
-    # Return conjugations in a structured format, like a dictionary
-    conjugations = {
-        "binyan": "Some Binyan",
-        "conjugation1": "Conjugation 1",
-        "conjugation2": "Conjugation 2",
-        # Add more conjugations as needed
-    }
-    return conjugations
+
 
 @app.route('/conjugations', methods=['GET'])
 def get_conjugations():
@@ -34,61 +24,11 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-def conjugate_poal = ()
 
 #try to get to import all of the files into one dictionary
 
 
-root =
 
-def match_hebrew_root(text):
-    pattern = r'\b[\u0590-\u05FF]{3,5}\b'
-    # Explanation of the pattern:
-    # \b               - Word boundary
-    # [\u0590-\u05FF]  - Match any Hebrew letter
-    # {3,5}            - Match between 3 and 5 of the previous pattern
-    # \b               - Word boundary
-    match = re.match(pattern, text)
-    if match:
-        return match.group()
-    else:
-        return None
-
-# Test the function
-text = "שלום עליכם"
-hebrew_root = match_hebrew_root(word)
-if hebrew_root:
-    print(f"The text contains the Hebrew root '{hebrew_root}'.")
-else:
-    print("No Hebrew root found.")
-
-def shoresh = (root1, root2, root3)
-
-def binyan = "paal", "piel", "hifil", "hitpael", "nifal", "pual", "hufal"
-
-def mishkal =
-
-def zman = "hoveh", "avar", "atid"
-
-def shem_guf = "ani", "ata", "at", "hu", "he", "anaxnu", "atem", "aten", "hem", "hen"
-
-def conjugate_verb(shoresh, binyan, mishkal, zman, shem_guf):
-    # Assuming 'conjugations_data' is the data structure containing the conjugation information
-    if binyan in pealim:
-        if mishkal in pealim[binyan]:
-            if zman in pealim[binyan][mishkal]:
-                if len(root) == 3:
-                    return pealim[binyan][mishkal][zman][shem_guf].format(root1=root[0], root2=root[1], root3=root[2])
-                elif len(root) == 4:
-                    return pealim[binyan][mishkal][zman][shem_guf].format(root1=root[0], root2=root[1], root3=root[2], root4=root[3])
-    return "Conjugation not found"
-
-# Example usage:
-shoresh = ("ש", "ל", "מ")
-binyan = "paal_shlemim"
-zman = "hoveh"
-shem_guf = "ani"
-print(conjugate_verb(shoresh, binyan, mishkal, zman, shem_guf))  # Output: "שולם"
 
 #anin= ani nekeva
 #ani = both zachar or nekeva
@@ -121,36 +61,36 @@ pealim = {
         },
 
         "avar":{
-            ("כתבתי",):{
+            "כתבתי":{
             "ani":f"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("כתבת",):{
+            "כתבת":{
             "ata":f"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{qametz}"
             },
-            ("כתבת"):{
+            "כתבת":{
             "at":f"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{shva}"
             },
-            ("כתב"):{
+            "כתב":{
             "hu":f"{root1}{qametz}{root2}{patax}{root3}"
 
             },
-            ("כתבה"):{
+            "כתבה":{
             "hi":f"{root1}{qametz}{root2}{shva}{root3}{qametz}{hey}"
             },
-            ("כתבנו"):{
+            "כתבנו":{
             "anaxnu":f"{root1}{qametz}{root2}{patax}{root3}{shva}{nun}{shureq}"
             },
-            ("כתבתם"):{
+            "כתבתם":{
             "atem":f"{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("כתבתן"):{
+            "כתבתן":{
             "aten":f"{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("כתבו"):{
+            "כתבו":{
             "hem":f"{root1}{qametz}{root2}{shva}{root3}{shureq}"
             },
-            ("כתבו"):{
+            "כתבו":{
             "hen":f"{root1}{qametz}{root2}{shva}{root3}{shureq}"
             },
 
@@ -159,89 +99,89 @@ pealim = {
         "atid":{
 
             "efal":{
-                ("אבלע"):{
+                "אבלע":{
                 "ani":f"{alef}{segol}{root1}{shva}{root2}{patax}{root3}",
 
-                ("תבלע"):{
+                "תבלע":{
                 "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{patax}{root3}",
 
-                ("תבלעי"):{
+                "תבלעי":{
                 "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
 
-                ("יבלע"):{
+                "יבלע":{
                 "hu":f"{yod}{xiriq}{root1}{shva}{root2}{patax}{root3}",
 
-                ("תבלע"):{
-                "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod},"
+                "תבלע":{
+                "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
 
-                ("נבלע"):{
+                "נבלע":{
                 "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{patax}{root3}",
 
-                ("תבלעו"):{
+                "תבלעו":{
                 "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-                ("תבלעו"):{
+                "תבלעו":{
                 "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-                ("יבלעו"):{
+                "יבלעו":{
                 "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-                ("יבלעו"):{
+                "יבלעו":{
                 "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
 
 
 
-            "efol":,
-                ("אכתוב"):{
+            "efol":{
+                "אכתוב":{
                 "ani":f"{alef}{segol}{root1}{shva}{root2}{xolammalei}{root3}",
 
-                ("תכתוב"):{
+                "תכתוב":{
                 "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
-                ("תכתבי"):{
+                "תכתבי":{
                 "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
 
-                ("יכתוב"):{
+                "יכתוב":{
                 "hu":f"{yod}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
-                ("תכתוב"):{
-                "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3},"
+                "תכתוב":{
+                "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
-                ("נכתוב"):{
+                "נכתוב":{
                 "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
 
-                ("תכתבו"):{
+                "תכתבו":{
                 "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-                ("תכתבו"):{
+                "תכתבו":{
                 "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-                ("יכתבו"):{
+                "יכתבו":{
                 "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
-                ("יכתבו"):{
+                "יכתבו":{
                 "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
 
 
     "lamed_hey_yod":{
         "hoveh":{
-             ("קונה",): {
+             "קונה":{
               "aniz": f"{root1}{xolammalei}{root2}{segol}{hey}",
               "ata": f"{root1}{xolammalei}{root2}{segol}{hey}",
               "hu": f"{root1}{xolammalei}{root2}{segol}{hey}",},
 
-              ("קונה",): {
+              "קונה":{
               "anin": f"{root1}{xolammalei}{root2}{qametz}{hey}",
               "at": f"{root1}{xolammalei}{root2}{qametz}{hey}",
               "hi": f"{root1}{xolammalei}{root2}{qametz}{hey}",},
 
-              ("קונים",): {
+              "קונים":{
               "anaxnuz": f"{root1}{xolammalei}{root2}{xiriq}{yod}{memsofit}",
               "atem": f"{root1}{xolammalei}{root2}{xiriq}{yod}{memsofit}",
               "hem": f"{root1}{xolammalei}{root2}{xiriq}{yod}{memsofit}",},
 
-              ("קונות",): {
+              "קונות":{
               "anaxnun":f"{root1}{xolammalei}{root2}{xolammalei}{tav}",
               "aten":f"{root1}{xolammalei}{root2}{xolammalei}{tav}",
               "hen":f"{root1}{xolammalei}{root2}{xolammalei}{tav}",}
@@ -250,36 +190,36 @@ pealim = {
               },
 
         "avar":{
-        ("קניתי",):{
+          "קניתי":{
           "ani":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{xiriq}{yod}"
           }
           ,
-          ("קנית",):{
+          "קנית":{
           "ata":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{qametz}"
           },
-          ("קנית"):{
+          "קנית":{
           "at":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{shva}"
           },
-          ("קנה"):{
+          "קנה":{
           "hu":f"{root1}{qametz}{root2}{qametz}{hey}"
 
           },
-          ("קנתה"):{
+          "קנתה":{
           "hi":f"{root1}{qametz}{root2}{shva}{tav}{qametz}{hey}"
           },
-          ("קנינו"):{
+          "קנינו":{
           "anaxnu":f"{root1}{qametz}{root2}{xiriq}{yod}{nun}{shureq}"
           },
-          ("קניתם"):{
+          "קניתם":{
           "atem":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{memsofit}"
           },
-          ("קניתן"):{
+          "קניתן":{
           "aten":f"{root1}{qametz}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{nunsofit}"
           },
-          ("קנו"):{
+          "קנו":{
           "hem":f"{root1}{qametz}{root2}{shureq}"
           },
-          ("קנו"):{
+          "קנו":{
           "hen":f"{root1}{qametz}{root2}{shureq}"
           },
 
@@ -287,34 +227,34 @@ pealim = {
 
       "atid":{
 
-          ("אקנה"):{
+          "אקנה":{
           "ani":f"{alef}{segol}{root1}{shva}{root2}{segol}{hey}",
 
-          ("תקנה"):{
+          "תקנה":{
           "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
-          ("תקני"):{
+          "תקני":{
           "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xiriq}{yod}",
 
-          ("יקנה"):{
+          "יקנה":{
           "hu":f"{yod}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
-          ("תקנה"):{
+          "תקנה":{
           "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
-          ("נקנה"):{
+          "נקנה":{
           "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{segol}{hey}",
 
-          ("תקנו"):{
+          "תקנו":{
           "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shureq}",
 
-          ("תקנו"):{
+          "תקנו":{
           "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shureq}",
 
-          ("יקנו"):{
+          "יקנו":{
           "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shureq}",
 
-          ("יקנו"):{
+          "יקנו":{
           "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shureq}",
 
 
@@ -325,22 +265,22 @@ pealim = {
     "pey_yod":{
 
         "hoveh":{
-          ("יורד",): {
+          "יורד":{
           "aniz": f"{yod}{xolammalei}{root2}{tzerei}{root3}",
           "ata": f"{yod}{xolammalei}{root2}{tzerei}{root3}",
           "hu": f"{yod}{xolammalei}{root2}{tzerei}{root3}",},
 
-          ("יורדת",): {
+          "יורדת":{
           "anin": f"{yod}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
           "at": f"{yod}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
           "hi": f"{yod}{xolammalei}{root2}{segol}{root3}{segol}{tav}",},
 
-          ("יורדים",): {
+          "יורדים":{
           "anaxnuz": f"{yod}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
           "atem": f"{yod}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
           "hem": f"{yod}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",},
 
-          ("יורדות",): {
+          "יורדות":{
           "anaxnun":f"{yod}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
           "aten":f"{yod}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
           "hen":f"{yod}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",}
@@ -349,36 +289,36 @@ pealim = {
           },
 
         "avar":{
-          ("ירדתי",):{
+          "ירדתי":{
           "ani":f"{yod}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}"
           }
           ,
-          ("ירדת",):{
+          "ירדת":{
           "ata":f"{yod}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{qametz}"
           },
-          ("ירדת"):{
+          "ירדת":{
           "at":f"{yod}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{shva}",
           },
-          ("ירד"):{
+          "ירד":{
           "hu":f"{yod}{qametz}{root2}{patax}{root3}"
 
           },
-          ("ירדה"):{
+          "ירדה":{
           "hi":f"{yod}{qametz}{root2}{shva}{root3}{qametz}{hey}"
           },
-          ("ירדנו"):{
+          "ירדנו":{
           "anaxnu":f"{yod}{qametz}{root2}{patax}{root3}{shva}{nun}{shureq}"
           },
-          ("ירדתם"):{
+          "ירדתם":{
           "atem":f"{yod}{qametz}{root2}{patax}{root3}{tav_with_mapik}{segol}{memsofit}"
           },
-          ("ירדתן"):{
+          "ירדתן":{
           "aten":f"{yod}{qametz}{root2}{patax}{root3}{tav_with_mapik}{segol}{nunsofit}"
           },
-          ("ירדו"):{
+          "ירדו":{
           "hem":f"{yod}{qametz}{root2}{shva}{root3}{shureq}"
           },
-          ("ירדו"):{
+          "ירדו":{
           "hen":f"{yod}{qametz}{root2}{shva}{root3}{shureq}"
           },
 
@@ -386,34 +326,34 @@ pealim = {
 
         "atid":{
 
-          ("ארד"):{
+          "ארד":{
           "ani":f"{alef}{tzerei}{root2}{tzerei}{root3}",
 
-          ("תרד"):{
+          "תרד":{
           "ata":f"{tav_with_mapik}{tzerei}{root1}{tzerei}{root3}",
 
-          ("תרדי"):{
+          "תרדי":{
           "at":f"{tav_with_mapik}{tzerei}{root2}{shva}{root3}{xiriq}{yod}",
 
-          ("ירד"):{
+          "ירד":{
           "hu":f"{yod}{tzerei}{root2}{tzerei}{root3}",
 
-          ("תרד"):{
+          "תרד":{
           "hi":f"{tav_with_mapik}{tzerei}{root1}{tzerei}{root3}",
 
-          ("נרד"):{
+          "נרד":{
           "anaxnu":f"{nun}{tzerei}{root2}{tzerei}{root3}",
 
-          ("תרדו"):{
+          "תרדו":{
           "atem":f"{tav_with_mapik}{tzerei}{root2}{shva}{root3}{shureq}",
 
-          ("תרדו"):{
+          "תרדו":{
           "aten":f"{tav_with_mapik}{tzerei}{root2}{shva}{root3}{shureq}",
 
-          ("ירדו"):{
+          "ירדו":{
           "hem":f"{yod}{tzerei}{root2}{shva}{root3}{shureq}",
 
-          ("ירדו"):{
+          "ירדו":{
           "hen":f"{yod}{tzerei}{root2}{shva}{root3}{shureq}",
 
 
@@ -422,22 +362,22 @@ pealim = {
 
     "lamed_alef":{
         "hoveh":{
-          ("קורא",): {
+          "קורא":{
           "aniz": f"{root1}{xolammalei}{root2}{tzerei}{alef}",
           "ata": f"{root1}{xolammalei}{root2}{tzerei}{alef}",
           "hu": f"{root1}{xolammalei}{root2}{tzerei}{alef}",},
 
-          ("קוראת",): {
+          "קוראת":{
           "anin": f"{root1}{xolammalei}{root2}{tzerei}{alef}{tav}",
           "at": f"{root1}{xolammalei}{root2}{tzerei}{alef}{tav}",
           "hi": f"{root1}{xolammalei}{root2}{tzerei}{alef}{tav}",},
 
-          ("קוראים",): {
+          "קוראים":{
           "anaxnuz": f"{root1}{xolammalei}{root2}{shva}{alef}{xiriq}{yod}{memsofit}",
           "atem": f"{root1}{xolammalei}{root2}{shva}{alef}{xiriq}{yod}{memsofit}",
           "hem": f"{root1}{xolammalei}{root2}{shva}{alef}{xiriq}{yod}{memsofit}",},
 
-          ("קוראות",): {
+          "קוראות":{
           "anaxnun":f"{root1}{xolammalei}{root2}{shva}{alef}{xolammalei}{tav}",
           "aten":f"{root1}{xolammalei}{root2}{shva}{alef}{xolammalei}{tav}",
           "hen":f"{root1}{xolammalei}{root2}{shva}{alef}{xolammalei}{tav}",}
@@ -446,36 +386,36 @@ pealim = {
           },
 
         "avar":{
-          ("קראתי",):{
+          "קראתי":{
           "ani":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{xiriq}{yod}"
           }
           ,
-          ("קראת",):{
+          "קראת":{
           "ata":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{qametz}"
           },
-          ("קראת"):{
+          "קראת":{
           "at":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{shva}"
           },
-          ("קרא"):{
+          "קרא":{
           "hu":f"{root1}{qametz}{root2}{qametz}{alef}"
 
           },
-          ("קראה"):{
+          "קראה":{
           "hi":f"{root1}{qametz}{root2}{shva}{alef}{qametz}{hey}"
           },
-          ("קראנו"):{
+          "קראנו":{
           "anaxnu":f"{root1}{qametz}{root2}{qametz}{alef}{nun}{shureq}"
           },
-          ("קראתם"):{
+          "קראתם":{
           "atem":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{segol}{memsofit}"
           },
-          ("קראתן"):{
+          "קראתן":{
           "aten":f"{root1}{qametz}{root2}{qametz}{alef}{tav}{segol}{nunsofit}"
           },
-          ("קראו"):{
+          "קראו":{
           "hem":f"{root1}{qametz}{root2}{shva}{alef}{shureq}"
           },
-          ("קראו"):{
+          "קראו":{
           "hen":f"{root1}{qametz}{root2}{shva}{alef}{shureq}"
           },
 
@@ -483,34 +423,34 @@ pealim = {
 
         "atid":{
 
-          ("אקרא"):{
+          "אקרא":{
           "ani":f"{alef}{segol}{root1}{shva}{root2}{qametz}{alef}",
 
-          ("תקרא"):{
+          "תקרא":{
           "ata":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
-          ("תקראי"):{
+          "תקראי":{
           "at":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{alef}{xiriq}{yod}",
 
-          ("יקרא"):{
+          "יקרא":{
           "hu":f"{yod}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
-          ("תקרא"):{
+          "תקרא":{
           "hi":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
-          ("נקרא"):{
+          "נקרא":{
           "anaxnu":f"{nun}{xiriq}{root1}{shva}{root2}{qametz}{alef}",
 
-          ("תקראו"):{
+          "תקראו":{
           "atem":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
-          ("תקראו"):{
+          "תקראו":{
           "aten":f"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
-          ("יקראו"):{
+          "יקראו":{
           "hem":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
-          ("יקראו"):{
+          "יקראו":{
           "hen":f"{yod}{xiriq}{root1}{shva}{root2}{shva}{alef}{shureq}",
 
 
@@ -521,24 +461,24 @@ pealim = {
 
 
 
-    "pey_nun":
+    "pey_nun":{
         "hoveh":{
-          ("נותן",): {
+          "נותן":{
           "aniz": f"{root1}{xolammalei}{root2}{tzerei}{root3}",
           "ata": f"{root1}{xolammalei}{root2}{tzerei}{root3}",
           "hu": f"{root1}{xolammalei}{root2}{tzerei}{root3}",},
 
-          ("נותנת",): {
+          "נותנת":{
           "anin": f"",
           "at": f"",
           "hi": f"",},
 
-          ("נותנים",): {
+          "נותנים":{
           "anaxnuz": f"",
           "atem": f"",
           "hem": f"",},
 
-          ("נותנות",): {
+          "נותנות":{
           "anaxnun":f"",
           "aten":f"",
           "hen":f"",}
@@ -547,36 +487,36 @@ pealim = {
           },
 
         "avar":{
-          ("נתנתי",):{
+          "נתנתי":{
           "ani":f""
           }
           ,
-          ("נתנת",):{
+          "נתנת":{
           "ata":f""
           },
-          ("נתנת"):{
+          "נתנת":{
           "at":f""
           },
-          ("נתן"):{
+          "נתן":{
           "hu":f""
 
           },
-          ("נתנה"):{
+          "נתנה":{
           "hi":f""
           },
-          (""):{
+          "":{
           "anaxnu":f""
           },
-          ("נתנתם"):{
+          "נתנתם":{
           "atem":f""
           },
-          ("נתנתן"):{
+          "נתנתן":{
           "aten":f""
           },
-          ("נתנו"):{
+          "נתנו":{
           "hem":f""
           },
-          ("נתנו"):{
+          "נתנו":{
           "hen":f""
           },
 
@@ -584,57 +524,57 @@ pealim = {
 
         "atid":{
 
-          ("אתן"):{
+          "אתן":{
           "ani":f"{alef}{root2}{root3}",
 
-          ("תתן"):{
+          "תתן":{
           "ata":f"{tav_with_mapik}{root2}{root3}",
 
-          ("תתני"):{
+          "תתני":{
           "at":f"{tav_with_mapik}{root2}{root3}{xiriq}{yod}",
 
-          ("יתן"):{
+          "יתן":{
           "hu":f"{yod}{root2}{root3}",
 
-          ("תתן"):{
+          "תתן":{
           "hi":f"{tav_with_mapik}{root2}{root3}",
 
-          ("נתן"):{
+          "נתן":{
           "anaxnu":f"{nun}{root2}{root3}",
 
-          ("תתנו"):{
+          "תתנו":{
           "atem":f"{tav_with_mapik}{root2}{root3}{shureq}",
 
-          ("תתנו"):{
+          "תתנו":{
           "aten":f"{tav_with_mapik}{root2}{root3}{shureq}",
 
-          ("יתנו"):{
+          "יתנו":{
           "hem":f"{yod}{root2}{root3}{shureq}",
 
-          ("יתנו"):{
+          "יתנו":{
           "hen":f"{yod}{root2}{root3}{shureq}",
 
 
 
 
-    "pey_aleph":
+    "pey_aleph":{
         "hoveh":{
-          ("אוכל",): {
+          "אוכל":{
           "aniz": f"{alef}{xolammalei}{root2}{root3}",
           "ata": f"",
-          "hu": f"",},
+          "hu": f"",
 
-          ("אוכלת",): {
+          "אוכלת":{
           "anin": f"{alef}{xolammalei}{root2}{root3}{tav}",
           "at": f"{alef}{xolammalei}{root2}{root3}{tav}",
           "hi": f"{alef}{xolammalei}{root2}{root3}{tav}",},
 
-          ("אוכלים",): {
+          "אוכלים":{
           "anaxnuz": f"{alef}{xolammalei}{root2}{root3}{xiriq}{yod}{memsofit}",
           "atem": f"{alef}{xolammalei}{root2}{root3}{xiriq}{yod}{memsofit}",
           "hem": f"{alef}{xolammalei}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-          ("אוכלות",): {
+          "אוכלות":{
           "anaxnun":f"{alef}{xolammalei}{root2}{root3}{xolammalei}{tav}",
           "aten":f"{alef}{xolammalei}{root2}{root3}{xolammalei}{tav}",
           "hen":f"{alef}{xolammalei}{root2}{root3}{xolammalei}{tav}",}
@@ -643,70 +583,70 @@ pealim = {
           },
 
         "avar":{
-          ("אכלתי",):{
+          "אכלתי":{
           "ani":f"{alef}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
           }
           ,
-          ("אכלת",):{
+          "אכלת":{
           "ata":f"{alef}{root2}{root3}{tav_with_mapik}{qametz}"
           },
-          ("אכלת"):{
+          "אכלת":{
           "at":f"{alef}{root2}{root3}{tav_with_mapik}{shva}"
           },
-          ("אכל"):{
+          "אכל":{
           "hu":f"{alef}{root2}{root3}"
 
           },
-          ("אכלה"):{
+          "אכלה":{
           "hi":f"{alef}{root2}{root3}{hey}"
           },
-          ("אכלנו"):{
+          "אכלנו":{
           "anaxnu":f"{alef}{root2}{root3}{nun}{shureq}"
           },
-          ("אכלתם"):{
+          "אכלתם":{
           "atem":f"{alef}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
           },
-          ("אכלתן"):{
+          "אכלתן":{
           "aten":f"{alef}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
           },
-          ("אכלו"):{
+          "אכלו":{
           "hem":f"{alef}{root2}{root3}{shureq}"
           },
-          ("אכלו"):{
+          "אכלו":{
           "hen":f"{alef}{root2}{root3}{shureq}"
           },
 
 
         "atid":{
 
-          ("אוכל"):{
+          "אוכל":{
           "ani":f"{alef}{xolammalei}{alef}{root2}{root3}",
 
-          ("תואכל"):{
+          "תואכל":{
           "ata":f"{tav}{xolammalei}{alef}{root2}{root3}",
 
-          ("תואכלי"):{
+          "תואכלי":{
           "at":f"{tav}{xolammalei}{alef}{root2}{root3}{xiriq}{yod}",
 
-          ("יואכל"):{
-          "hu":f"{yod}{xolammalei}{alef}{root2}{root3}",}
+          "יואכל":{
+          "hu":f"{yod}{xolammalei}{alef}{root2}{root3}",
 
-          ("תואכל"):{
+          "תואכל":{
           "hi":f"{tav}{xolammalei}{alef}{root2}{root3}",
 
-          ("נואכל"):{
+          "נואכל":{
           "anaxnu":f"{nun}{xolammalei}{alef}{root2}{root3}",
 
-          ("תואכלו"):{
+          "תואכלו":{
           "atem":f"{tav}{xolammalei}{alef}{root2}{root3}{shureq}",
 
-          ("תואכלו"):{
+          "תואכלו":{
           "aten":f"{tav}{xolammalei}{alef}{root2}{root3}{shureq}",
 
-          ("יואכלו"):{
+          "יואכלו":{
           "hem":f"{yod}{xolammalei}{alef}{root2}{root3}{shureq}",
 
-          ("יואכלו"):{
+          "יואכלו":{
           "hen":f"{yod}{xolammalei}{alef}{root2}{root3}{shureq}",
 
 
@@ -718,24 +658,24 @@ pealim = {
 
 
 
-    "ayin_vav":
-        "hoveh"
-          ("גר",): {
+    "ayin_vav":{
+        "hoveh":{
+          "גר":{
           "aniz": f"{root1}{mapik}{qametz}{root3}",
           "ata": f"{root1}{mapik}{qametz}{root3}",
           "hu": f"{root1}{mapik}{qametz}{root3}",},
 
-          ("גרה",): {
+          "גרה":{
           "anin": f"{root1}{mapik}{qametz}{root3}{qametz}{hey}",
           "at": f"{root1}{mapik}{qametz}{root3}{qametz}{hey}",
           "hi": f"{root1}{mapik}{qametz}{root3}{qametz}{hey}",},
 
-          ("גרים",): {
+          "גרים":{
           "anaxnuz": f"{root1}{mapik}{qametz}{root3}{xiriq}{yod}{memsofit}",
           "atem": f"{root1}{mapik}{qametz}{root3}{xiriq}{yod}{memsofit}",
           "hem": f"{root1}{mapik}{qametz}{root3}{xiriq}{yod}{memsofit}",},
 
-          ("גרות",): {
+          "גרות":{
           "anaxnun":f"{root1}{mapik}{qametz}{root3}{xolammalei}{tav}",
           "aten":f"{root1}{mapik}{qametz}{root3}{xolammalei}{tav}",
           "hen":f"{root1}{mapik}{qametz}{root3}{xolammalei}{tav}",}
@@ -744,36 +684,36 @@ pealim = {
           },
 
         "avar":{
-          ("גרתי",):{
+          "גרתי":{
           "ani":f"{root1}{mapik}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}"
           }
           ,
-          ("גרת",):{
+          "גרת":{
           "ata":f"{root1}{mapik}{patax}{root3}{shva}{tav_with_mapik}{qametz}"
           },
-          ("גרת"):{
+          "גרת":{
           "at":f"{root1}{mapik}{patax}{root3}{shva}{tav_with_mapik}{shva}"
           },
-          ("גר"):{
+          "גר":{
           "hu":f"{root1}{mapik}{qametz}{root3}"
 
           },
-          ("גרה"):{
+          "גרה":{
           "hi":f"{root1}{mapik}{qametz}{root3}{qametz}{hey}"
           },
-          ("גרנו"):{
+          "גרנו":{
           "anaxnu":f"{root1}{mapik}{patax}{root3}{shva}{nun}{shureq}"
           },
-          ("גרתם"):{
+          "גרתם":{
           "atem":f"{root1}{mapik}{patax}{root3}{shva}{tav_with_mapik}{segol}{memsofit}"
           },
-          ("גרתן"):{
+          "גרתן":{
           "aten":f"{root1}{mapik}{patax}{root3}{shva}{tav_with_mapik}{segol}{nunsofit}"
           },
-          ("גרו"):{
+          "גרו":{
           "hem":f"{root1}{mapik}{qametz}{root3}{shureq}"
           ,
-          ("גרו"):{
+          "גרו":{
           "hen":f"{root1}{mapik}{qametz}{root3}{shureq}"
           },
 
@@ -781,60 +721,60 @@ pealim = {
 
         "atid":{
 
-          ("אגור"):{
+          "אגור":{
           "ani":f"{alef}{qametz}{root1}{root2}{root3}",
 
-          ("תגור"):{
+          "תגור":{
           "ata":f"{tav_with_mapik}{qametz}{root1}{root2}{root3}",
 
-          ("תגורי"):{
+          "תגורי":{
           "at":f"{tav_with_mapik}{qametz}{root1}{root2}{root3}{xiriq}{yod}",
 
-          ("יגור"):{
+          "יגור":{
           "hu":f"{yod}{qametz}{root1}{root2}{root3}",
 
-          ("תגור"):{
-          "hi":f"{tav_with_mapik}{qametz}{root1}{root2}{root3}"
+          "תגור":{
+          "hi":f"{tav_with_mapik}{qametz}{root1}{root2}{root3}",
 
-          ("נגור"):{
-          "anaxnu":f"{nun}{qametz}{root1}{root2}{root3}",
+          "נגור":{
+          "anaxnu":f"{nun}{qametz}{root1}{root2}{root3}"},
 
-          ("תגורו"):{
+          "תגורו":{
           "atem":f"{tav_with_mapik}{qametz}{root1}{root2}{root3}{shva}{shureq}",
 
-          ("תגורו"):{
+          "תגורו":{
           "aten":f"{tav_with_mapik}{qametz}{root1}{root2}{root3}{shva}{shureq}",
 
-          ("יגורו"):{
+          "יגורו":{
           "hem":f"{yod}{qametz}{root1}{root2}{root3}{shva}{shureq}",
 
-          ("יגורו"):{
+          "יגורו":{
           "hen":f"{yod}{qametz}{root1}{root2}{root3}{shva}{shureq}",
 
 
 
 "piel":{
-    "shlemim":
-        "hoveh":
-            ("מכתב",): {
-            "aniz": f"{mem}{dagesh}{nikkud changes}{root1}{root2}{root3}",
-            "ata": f"{mem}{nikkud changes}{root1}{root2}{root3}",
-            "hu": f"{mem}{nikkud changes}{root1}{root2}{root3}",},
+    "shlemim":{
+        "hoveh":{
+            "מכתב":{
+            "aniz": f"{mem}{dagesh}{nikkudchanges}{root1}{root2}{root3}",
+            "ata": f"{mem}{nikkudchanges}{root1}{root2}{root3}",
+            "hu": f"{mem}{nikkudchanges}{root1}{root2}{root3}",},
 
-            ("מכתבת",): {
-            "anin": f"{mem}{dagesh}{nikkud changes}{root1}{root2}{root3}{tav}",
-            "at": f"{mem}{nikkud changes}{root1}{root2}{root3}{tav}",
-            "hi": f"{mem}{nikkud changes}{root1}{root2}{root3}{tav}",},
+            "מכתבת":{
+            "anin": f"{mem}{dagesh}{nikkudchanges}{root1}{root2}{root3}{tav}",
+            "at": f"{mem}{nikkudchanges}{root1}{root2}{root3}{tav}",
+            "hi": f"{mem}{nikkudchanges}{root1}{root2}{root3}{tav}",},
 
-            ("מכתבים",): {
-            "anaxnuz": f"{mem}{dagesh}{nikkud changes}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
-            "atem": f"{mem}{nikkud changes}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
-            "hem": f"{mem}{nikkud changes}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",},
+            "מכתבים":{
+            "anaxnuz": f"{mem}{dagesh}{nikkudchanges}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
+            "atem": f"{mem}{nikkudchanges}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
+            "hem": f"{mem}{nikkudchanges}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מכתבות",): {
-            "anaxnun":f"{mem}{dagesh}{nikkud changes}{root1}{root2}{root3}{xolam}{tav}",
-            "aten":f"{mem}{nikkud changes}{root1}{root2}{root3}{xolam}{tav}",
-            "hen":f"{mem}{nikkud changes}{root1}{root2}{root3}{xolam}{tav}",}
+            "מכתבות":{
+            "anaxnun":f"{mem}{dagesh}{nikkudchanges}{root1}{root2}{root3}{xolam}{tav}",
+            "aten":f"{mem}{nikkudchanges}{root1}{root2}{root3}{xolam}{tav}",
+            "hen":f"{mem}{nikkudchanges}{root1}{root2}{root3}{xolam}{tav}",}
             }
 
 
@@ -842,36 +782,36 @@ pealim = {
 },
 
         "avar":{
-            ("כיתבתי",):{
+            "כיתבתי":{
             "ani":f"{root1}{dagesh}{xiriq}{yod}{root2}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("כיתבת",):{
+            "כיתבת":{
             "ata":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shva}{tav_with_mapik}{qametz}"
             },
-            ("כיתבת"):{
+            "כיתבת":{
             "at":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shva}{tav_with_mapik}{shva}"
             },
-            ("כיתב"):{
+            "כיתב":{
             "hu":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}"
 
             },
-            ("כיתבה"):{
+            "כיתבה":{
             "hi":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{hey}"
             },
-            ("כיתבנו"):{
+            "כיתבנו":{
             "anaxnu":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{nun}{sh}"
             },
-            ("כיתבתם"):{
+            "כיתבתם":{
             "atem":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shva}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("כיתבתן"):{
+            "כיתבתן":{
             "aten":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shva}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("כיתבו"):{
+            "כיתבו":{
             "hem":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
             },
-            ("כיתבו"):{
+            "כיתבו":{
             "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
             },
 
@@ -879,57 +819,57 @@ pealim = {
 
         "atid":{
 
-            ("אכתב"):{
+            "אכתב":{
             "ani":f"{alef}{segol}{root1}{root2}{root3}",
 
-            ("תכתב"):{
+            "תכתב":{
             "ata":f"{tav_with_mapik}{root1}{root2}{root3}",
 
-            ("תכתבי"):{
+            "תכתבי":{
             "at":f"{tav_with_mapik}{root1}{root2}{root3}{xiriq}{yod}",
 
-            ("יכתב"):{
+            "יכתב":{
             "hu":f"{yod}{root1}{root2}{root3}",
 
-            ("תכתב"):{
+            "תכתב":{
             "hi":f"{tav_with_mapik}{root1}{root2}{root3}",
 
-            ("נכתב"):{
+            "נכתב":{
             "anaxnu":f"{nun}{root1}{root2}{root3}",
 
-            ("תכתבו"):{
+            "תכתבו":{
             "atem":f"{tav_with_mapik}{root1}{root2}{root3}{shureq}",
 
-            ("תכתבו"):{
+            "תכתבו":{
             "aten":f"{tav_with_mapik}{root1}{root2}{root3}{shureq}",
 
-            ("יכתבו"):{
+            "יכתבו":{
             "hem":f"{yod}{root1}{root2}{root3}{shureq}",
 
-            ("יכתבו"):{
+            "יכתבו":{
             "hen":f"{yod}{root1}{root2}{root3}{shureq}",
 
 
 
 
-    "merubayim":
-        "hoveh":
-            ("משכתב",): {
+    "merubayim":{
+        "hoveh":{
+            "משכתב":{
             "aniz": f"{mem}{root1}{root2}{root3}{root4}",
             "ata": f"{mem}{root1}{root2}{root3}{root4}",
             "hu": f"{mem}{root1}{root2}{root3}{root4}",},
 
-            ("משכתבת",): {
-            "anin": f"{mem}{root1}{root2}{root3}{root4}{tav}",,
+            "משכתבת":{
+            "anin": f"{mem}{root1}{root2}{root3}{root4}{tav}",
             "at": f"{mem}{root1}{root2}{root3}{root4}{tav}",
             "hi": f"{mem}{root1}{root2}{root3}{root4}{tav}",},
 
-            ("משכתבים",): {
+            "משכתבים":{
             "anaxnuz": f"{mem}{root1}{root2}{root3}{root4}{xiriq}{yod}{memsofit}",
             "atem":  f"{mem}{root1}{root2}{root3}{root4}{xiriq}{yod}{memsofit}",
             "hem":  f"{mem}{root1}{root2}{root3}{root4}{xiriq}{yod}{memsofit}",},
 
-            ("משכתבות",): {
+            "משכתבות":{
             "anaxnun": f"{mem}{root1}{root2}{root3}{root4}{xolammalei}{tav}",
             "aten":f"{mem}{root1}{root2}{root3}{root4}{xolammalei}{tav}",
             "hen":f"{mem}{root1}{root2}{root3}{root4}{xolammalei}{tav}",}
@@ -938,36 +878,36 @@ pealim = {
             },
 
         "avar":{
-            ("שיכתבתי",):{
+            "שיכתבתי":{
             "ani":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("שיכתבת",):{
+            "שיכתבת":{
             "ata":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("שיכתבת"):{
+            "שיכתבת":{
             "at":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("שיכתב"):{
+            "שיכתב":{
             "hu":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}"
 
             },
-            ("שיכתבה"):{
+            "שיכתבה":{
             "hi":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{hey}"
             },
-            ("שיכתבנו"):{
+            "שיכתבנו":{
             "anaxnu":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{nun}{shureq}"
             },
-            ("שיכתבתם"):{
+            "שיכתבתם":{
             "atem":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("שיכתבתן"):{
+            "שיכתבתן":{
             "aten":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("שיכתבו"):{
+            "שיכתבו":{
             "hem":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
             },
-            ("שיכתבו"):{
+            "שיכתבו":{
             "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
             },
 
@@ -975,58 +915,58 @@ pealim = {
 
         "atid":{
 
-            ("אשכתב"):{
+            "אשכתב":{
             "ani":f"{aleph}{root1}{root2}{root3}{root4}",
 
-            ("תשכתב"):{
+            "תשכתב":{
             "ata":f"{tav_with_mapik}{root1}{root2}{root3}{root4}",
 
-            ("תשכתבי"):{
+            "תשכתבי":{
             "at":f"{tav_with_mapik}{root1}{root2}{root3}{root4}{xiriq}{yod}",
 
-            ("ישכתב"):{
+            "ישכתב":{
             "hu":f"{yod}{root1}{root2}{root3}{root4}",
 
-            ("תשכתב"):{
-            "hi":f"{tav_with_mapik}{root1}{root2}{root3}{root4}"
+            "תשכתב":{
+            "hi":f"{tav_with_mapik}{root1}{root2}{root3}{root4}",
 
-            ("נשכתב"):{
+            "נשכתב":{
             "anaxnu":f"{nun}{root1}{root2}{root3}{root4}",
 
-            ("תשכתבו"):{
+            "תשכתבו":{
             "atem":f"{tav_with_mapik}{root1}{root2}{root3}{root4}{shureq}",
 
-            ("תשכתבו"):{
+            "תשכתבו":{
             "aten":f"{tav_with_mapik}{root1}{root2}{root3}{root4}{shureq}",
 
-            ("ישכתבו"):{
+            "ישכתבו":{
             "hem":f"{yod}{root1}{root2}{root3}{root4}{shureq}",
 
-            ("ישכתבו"):{
+            "ישכתבו":{
             "hen":f"{yod}{root1}{root2}{root3}{root4}{shureq}",
 
 
 
 
 
-    "lamed_alef":
-        "hoveh":
-            ("ממלא",): {
+    "lamed_alef":{
+        "hoveh":{
+            "ממלא": {
             "aniz": f"{mem}{root1}{root2}{root3}",
             "ata": f"{mem}{root1}{root2}{root3}",
             "hu": f"{mem}{root1}{root2}{root3}",},
 
-            ("ממלאה",): {
+            "ממלאה": {
             "anin": f"{mem}{root1}{root2}{root3}{hey}",
             "at": f"{mem}{root1}{root2}{root3}{hey}",
             "hi": f"{mem}{root1}{root2}{root3}{hey}",},
 
-            ("ממלאים",): {
+            "ממלאים": {
             "anaxnuz": f"{mem}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("ממלאות",): {
+            "ממלאות": {
             "anaxnun":f"{mem}{root1}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{root1}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{root1}{root2}{root3}{xolammalei}{tav}",}
@@ -1035,36 +975,36 @@ pealim = {
             },
 
         "avar":{
-            ("מילאתי",):{
+            "מילאתי":{
             "ani":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("מילאת",):{
+            "מילאת":{
             "ata":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("מילאת"):{
+            "מילאת":{
             "at":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("מילא"):{
+            "מילא":{
             "hu":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}"
 
             },
-            ("מילאה"):{
+            "מילאה":{
             "hi":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{hey}"
             },
-            ("מילאנו"):{
+            "מילאנו":{
             "anaxnu":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{nun}{shureq}"
             },
-            ("מילאתם"):{
+            "מילאתם":{
             "atem":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("מילאתן"):{
+            "מילאתן":{
             "aten":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("מילאו"):{
+            "מילאו":{
             "hem":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
             },
-            ("מילאו"):{
+            "מילאו":{
             "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{root3}{shureq}"
             },
 
@@ -1072,56 +1012,56 @@ pealim = {
 
         "atid":{
 
-            ("אמלא"):{
+            "אמלא":{
             "ani":f"{alef}{root1}{root2}{root3}",
 
-            ("תמלא"):{
+            "תמלא":{
             "ata":f"{tav_with_mapik}{root1}{root2}{root3}",
 
-            ("תמלאי"):{
+            "תמלאי":{
             "at":f"{tav_with_mapik}{root1}{root2}{root3}{yod}",
 
-            ("ימלא"):{
+            "ימלא":{
             "hu":f"{yod}{root1}{root2}{root3}",
 
-            ("תמלא"):{
-            "hi":f"{tav_with_mapik}{root1}{root2}{root3}"
+            "תמלא":{
+            "hi":f"{tav_with_mapik}{root1}{root2}{root3}",
 
-            ("נמלא"):{
+            "נמלא":{
             "anaxnu":f"{nun}{root1}{root2}{root3}",
 
-            ("תמלאו"):{
+            "תמלאו":{
             "atem":f"{tav_with_mapik}{root1}{root2}{root3}{shureq}",
 
-            ("תמלאו"):{
+            "תמלאו":{
             "aten":f"{tav_with_mapik}{root1}{root2}{root3}{shureq}",
 
-            ("ימלאו"):{
+            "ימלאו":{
             "hem":f"{yod}{root1}{root2}{root3}{shureq}",
 
-            ("ימלאו"):{
+            "ימלאו":{
             "hen":f"{yod}{root1}{root2}{root3}{shureq}",
 
 
 
-    "lamed_hey_yod":
-        "hoveh":
-            ("משנה",): {
+    "lamed_hey_yod":{
+        "hoveh":{
+            "משנה": {
             "aniz": f"{mem}{root1}{root2}{hey}",
             "ata": f"{mem}{root1}{root2}{hey}",
             "hu": f"{mem}{root1}{root2}{hey}",},
 
-            ("משנה",): {
+            "משנה": {
             "anin": f"{mem}{root1}{root2}{hey}",
             "at": f"{mem}{root1}{root2}{hey}",
             "hi": f"{mem}{root1}{root2}{hey}",},
 
-            ("משנים",): {
+            "משנים": {
             "anaxnuz": f"{mem}{root1}{root2}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{root1}{root2}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{root1}{root2}{xiriq}{yod}{memsofit}",},
 
-            ("משנות",): {
+            "משנות": {
             "anaxnun":f"{mem}{root1}{root2}{xolammalei}{tav}",
             "aten":f"{mem}{root1}{root2}{xolammalei}{tav}",
             "hen":f"{mem}{root1}{root2}{xolammalei}{tav}",}
@@ -1130,36 +1070,36 @@ pealim = {
             },
 
         "avar":{
-            ("שיניתי",):{
+            "שיניתי":{
             "ani":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{yod}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("שינית",):{
+            "שינית":{
             "ata":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{yod}{tav_with_mapik}{qametz}"
             },
-            ("שינית"):{
+            "שינית":{
             "at":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{yod}{tav_with_mapik}{shva}"
             },
-            ("שינה"):{
+            "שינה":{
             "hu":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{hey}"
 
             },
-            ("שינתה"):{
+            "שינתה":{
             "hi":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{tav}{hey}"
             },
-            ("שינינו"):{
+            "שינינו":{
             "anaxnu":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{yod}{tav_with_mapik}"
             },
-            ("שיניתם"):{
+            "שיניתם":{
             "atem":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("שיניתן"):{
+            "שיניתן":{
             "aten":f"{root1}{dagesh}{xiriq}{yod}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("שינו"):{
+            "שינו":{
             "hem":f"{root1}{dagesh}{xiriq}{yod}{root2}{shureq}"
             },
-            ("שינו"):{
+            "שינו":{
             "hen":f"{root1}{dagesh}{xiriq}{yod}{root2}{shureq}"
             },
 
@@ -1167,57 +1107,57 @@ pealim = {
 
         "atid":{
 
-            ("אשנה"):{
+            "אשנה":{
             "ani":f"{alef}{root1}{root2}{hey}",
 
-            ("תשנה"):{
+            "תשנה":{
             "ata":f"{tav_with_mapik}{root1}{root2}{hey}",
 
-            ("תשני"):{
+            "תשני":{
             "at":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}",
 
-            ("ישנה"):{
+            "ישנה":{
             "hu":f"{yod}{root1}{root2}{hey}",
 
-            ("תשנה"):{
+            "תשנה":{
             "hi":f"{tav_with_mapik}{root1}{root2}{hey}",
 
-            ("נשנה"):{
+            "נשנה":{
             "anaxnu":f"{nun}{root1}{root2}{hey}",
 
-            ("תשנו"):{
+            "תשנו":{
             "atem":f"{tav_with_mapik}{root1}{root2}{shureq}",
 
-            ("תשנו"):{
+            "תשנו":{
             "aten":f"{tav_with_mapik}{root1}{root2}{shureq}",
 
-            ("ישנו"):{
+            "ישנו":{
             "hem":f"{yod}{root1}{root2}{shureq}",
 
-            ("ישנו"):{
+            "ישנו":{
             "hen":f"{yod}{root1}{root2}{shureq}",
 
 
 
-"hifil":
-    "shlemim":
-        "hoveh":
-            ("מרגיש",): {
+"hifil":{
+    "shlemim":{
+        "hoveh":{
+            "מרגיש": {
             "aniz": f"",
             "ata": f"",
             "hu": f"",},
 
-            ("מרגישה",): {
+            "מרגישה": {
             "anin": f"",
             "at": f"",
             "hi": f"",},
 
-            ("מרגישים",): {
+            "מרגישים": {
             "anaxnuz": f"",
             "atem": f"",
             "hem": f"",},
 
-            ("מרגישות",): {
+            "מרגישות": {
             "anaxnun":f"",
             "aten":f"",
             "hen":f"",}
@@ -1226,36 +1166,36 @@ pealim = {
             },
 
         "avar":{
-            ("הרגשתי",):{
+            "הרגשתי":{
             "ani":f""
             }
             ,
-            ("הרגשת",):{
+            "הרגשת":{
             "ata":f""
             },
-            ("הרגשת"):{
+            "הרגשת":{
             "at":f""
             },
-            ("הרגיש"):{
+            "הרגיש":{
             "hu":f""
 
             },
-            ("הרגישה"):{
+            "הרגישה":{
             "hi":f""
             },
-            ("הרגשנו"):{
+            "הרגשנו":{
             "anaxnu":f""
             },
-            ("הרגשתם"):{
+            "הרגשתם":{
             "atem":f""
             },
-            ("הרגשתן"):{
+            "הרגשתן":{
             "aten":f""
             },
-            ("הרגישו"):{
+            "הרגישו":{
             "hem":f""
             },
-            ("הרגישו"):{
+            "הרגישו":{
             "hen":f""
             },
 
@@ -1263,58 +1203,58 @@ pealim = {
 
         "atid":{
 
-            ("ארגיש"):{
-            "ani":f"{alef}{}{root1}{root2}{xiriq}{yod}{root3}",
+            "ארגיש":{
+            "ani":f"{alef}{root1}{root2}{xiriq}{yod}{root3}",
 
-            ("תרגיש"):{
-            "ata":f"{tav_with_mapik}{}{root1}{root2}{xiriq}{yod}{root3}",
+            "תרגיש":{
+            "ata":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}{root3}",
 
-            ("תרגישי"):{
-            "at":f"{tav_with_mapik}{}{root1}{root2}{xiriq}{yod}{root3}{xiriq}{yod}",
+            "תרגישי":{
+            "at":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}{root3}{xiriq}{yod}",
 
-            ("ירגיש"):{
+            "ירגיש":{
             "hu":f"{yod}{root1}{root2}{xiriq}{yod}{root3}",
 
-            ("תרגיש"):{
-            "hi":f"{tav_with_mapik}{}{root1}{root2}{xiriq}{yod}{root3}",
+            "תרגיש":{
+            "hi":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}{root3}",
 
-            ("נרגיש"):{
+            "נרגיש":{
             "anaxnu":f"{nun}{root1}{root2}{xiriq}{yod}{root3}",
 
-            ("תרגישו"):{
-            "atem":f"{tav_with_mapik}{}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
+            "תרגישו":{
+            "atem":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("תרגישו"):{
-            "aten":f"{tav_with_mapik}{}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
+            "תרגישו":{
+            "aten":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("ירגישו"):{
-            "hem":f"{yod}{}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
+            "ירגישו":{
+            "hem":f"{yod}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("ירגישו"):{
-            "hen":f"{yod}{}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
-
-
+            "ירגישו":{
+            "hen":f"{yod}{root1}{root2}{xiriq}{yod}{root3}{shureq}",
 
 
 
-    "pey_yod":
-        "hoveh":
-            ("מוריד",): {
+
+
+    "pey_yod":{
+        "hoveh":{
+            "מוריד": {
             "aniz": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}",
             "ata": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}",
             "hu": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}",},
 
-            ("מורידה",): {
+            "מורידה": {
             "anin": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{hey}",
             "at": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{hey}",
             "hi": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{hey}",},
 
-            ("מורידים",): {
+            "מורידים": {
             "anaxnuz": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מורידות",): {
+            "מורידות": {
             "anaxnun":f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xolammalei}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",}
@@ -1323,36 +1263,36 @@ pealim = {
             },
 
         "avar":{
-            ("הורדתי",):{
+            "הורדתי":{
             "ani":f"{hey}{xolammalei}{root2}{root3}{shva}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("הורדת",):{
+            "הורדת":{
             "ata":f"{hey}{xolammalei}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("הורדת"):{
+            "הורדת":{
             "at":f"{hey}{xolammalei}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("הוריד"):{
+            "הוריד":{
             "hu":f"{hey}{xolammalei}{root2}{xiriq}{yod}{root3}"
 
             },
-            ("הורידה"):{
+            "הורידה":{
             "hi":f"{hey}{xolammalei}{root2}{xiriq}{yod}{root3}{hey}"
             },
-            ("הורדנו"):{
+            "הורדנו":{
             "anaxnu":f"{hey}{xolammalei}{root2}{root3}{nun}{shureq}"
             },
-            ("הורדתם"):{
+            "הורדתם":{
             "atem":f"{hey}{xolammalei}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("הורדתן"):{
+            "הורדתן":{
             "aten":f"{hey}{xolammalei}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("הורידו"):{
+            "הורידו":{
             "hem":f"{hey}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}"
             },
-            ("הורידו"):{
+            "הורידו":{
             "hen":f"{hey}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}"
             },
 
@@ -1360,57 +1300,57 @@ pealim = {
 
         "atid":{
 
-            ("אוריד"):{
+            "אוריד":{
             "ani":f"{alef}{xolammalei}{root2}{xiriq}{yod}{root3}",
 
-            ("תוריד"):{
+            "תוריד":{
             "ata":f"{tav_with_mapik}{xolammalei}{root2}{xiriq}{yod}{root3}",
 
-            ("תורידי"):{
+            "תורידי":{
             "at":f"{tav_with_mapik}{xolammalei}{root2}{xiriq}{yod}{root3}{xiriq}{yod}",
 
-            ("יוריד"):{
+            "יוריד":{
             "hu":f"{yod}{xolammalei}{root2}{xiriq}{yod}{root3}",
 
-            ("תוריד"):{
+            "תוריד":{
             "hi":f"{tav_with_mapik}{xolammalei}{root2}{xiriq}{yod}{root3}",
 
-            ("נוריד"):{
+            "נוריד":{
             "anaxnu":f"{nun}{xolammalei}{root2}{xiriq}{yod}{root3}",
 
-            ("תורידו"):{
+            "תורידו":{
             "atem":f"{tav_with_mapik}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("תורידו"):{
+            "תורידו":{
             "aten":f"{tav_with_mapik}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("יורידו"):{
+            "יורידו":{
             "hem":f"{yod}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("יורידו"):{
+            "יורידו":{
             "hen":f"{yod}{xolammalei}{root2}{xiriq}{yod}{root3}{shureq}",
 
 
 
 
-    "pey_nun":
-        "hoveh":
-            ("מנהיג",): {
+    "pey_nun":{
+        "hoveh":{
+            "מנהיג": {
             "aniz": f"{mem}{nun}{root2}{xiriq}{yod}{root3}",
             "ata": f"{mem}{nun}{root2}{xiriq}{yod}{root3}",
             "hu": f"{mem}{nun}{root2}{xiriq}{yod}{root3}",
 
-            ("מנהיגה",): {
+            "מנהיגה": {
             "anin": f"{mem}{nun}{root2}{xiriq}{yod}{root3}{hey}",
             "at": f"{mem}{nun}{root2}{xiriq}{yod}{root3}{hey}",
             "hi": f"{mem}{nun}{root2}{xiriq}{yod}{root3}{hey}",
 
-            ("מנהיגים",): {
+            "מנהיגים": {
             "anaxnuz": f"{mem}{nun}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{nun}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{nun}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
 
-            ("מנהיגות",): {
+            "מנהיגות": {
             "anaxnun":f"{mem}{nun}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{nun}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{nun}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
@@ -1419,36 +1359,36 @@ pealim = {
             },
 
         "avar":{
-            ("הנהגתי",):{
+            "הנהגתי":{
             "ani":f"{hey}{xiriq}{nun}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("הנהגת",):{
+            "הנהגת":{
             "ata":f"{hey}{xiriq}{nun}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("הנהגת"):{
+            "הנהגת":{
             "at":f"{hey}{xiriq}{nun}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("הנהיג"):{
+            "הנהיג":{
             "hu":f"{hey}{xiriq}{nun}{root2}{xiriq}{yod}{root3}"
 
             },
-            ("הנהיגה"):{
+            "הנהיגה":{
             "hi":f"{hey}{xiriq}{nun}{root2}{xiriq}{yod}{root3}{hey}"
             },
-            ("הנהגנו"):{
+            "הנהגנו":{
             "anaxnu":f"{hey}{xiriq}{nun}{root2}{root3}{nun}{shureq}"
             },
-            ("הנהגתם"):{
+            "הנהגתם":{
             "atem":f"{hey}{xiriq}{nun}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("הנהגתן"):{
+            "הנהגתן":{
             "aten":f"{hey}{xiriq}{nun}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("הנהיגו"):{
+            "הנהיגו":{
             "hem":f"{hey}{xiriq}{nun}{root2}{xiriq}{yod}{root3}{shureq}"
             },
-            ("הנהיגו"):{
+            "הנהיגו":{
             "hen":f"{hey}{xiriq}{nun}{root2}{xiriq}{yod}{root3}{shureq}"
             },
 
@@ -1456,58 +1396,58 @@ pealim = {
 
         "atid":{
 
-            ("אנהיג"):{
+            "אנהיג":{
             "ani":f"{alef}{nun}{root2}{xiriq}{yod}{root3}",
 
-            ("תנהיג"):{
+            "תנהיג":{
             "ata":f"{tav_with_mapik}{nun}{root2}{xiriq}{yod}{root3}",
 
-            ("תנהיגי"):{
+            "תנהיגי":{
             "at":f"{tav_with_mapik}{nun}{root2}{xiriq}{yod}{root3}{xiriq}{yod}",
 
-            ("ינהיג"):{
+            "ינהיג":{
             "hu":f"{yod}{nun}{root2}{xiriq}{yod}{root3}",
 
-            ("תנהיג"):{
+            "תנהיג":{
             "hi":f"{tav_with_mapik}{nun}{root2}{xiriq}{yod}{root3}",
 
-            ("ננהיג"):{
+            "ננהיג":{
             "anaxnu":f"{nun}{nun}{root2}{xiriq}{yod}{root3}",
 
-            ("תנהיגו"):{
+            "תנהיגו":{
             "atem":f"{tav_with_mapik}{nun}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("תנהיגו"):{
+            "תנהיגו":{
             "aten":f"{tav_with_mapik}{nun}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("ינהיגו"):{
+            "ינהיגו":{
             "hem":f"{yod}{nun}{root2}{xiriq}{yod}{root3}{shureq}",
 
-            ("ינהיגו"):{
+            "ינהיגו":{
             "hen":f"{yod}{nun}{root2}{xiriq}{yod}{root3}{shureq}",
 
 
 
 
 
-    "ayin_vav_yod":
-        "hoveh":
-            ("מבין",): {
+    "ayin_vav_yod":{
+        "hoveh":{
+            "מבין": {
             "aniz": f"{mem}{root1}{xiriq}{yod}{root3}",
             "ata": f"{mem}{root1}{xiriq}{yod}{root3}",
             "hu": f"{mem}{root1}{xiriq}{yod}{root3}",},
 
-            ("מבינה",): {
+            "מבינה": {
             "anin": f"{mem}{root1}{xiriq}{yod}{root3}{hey}",
             "at": f"{mem}{root1}{xiriq}{yod}{root3}{hey}",
             "hi": f"{mem}{root1}{xiriq}{yod}{root3}{hey}",},
 
-            ("מבינים",): {
+            "מבינים": {
             "anaxnuz": f"{mem}{root1}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{root1}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{root1}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מבינות",): {
+            "מבינות": {
             "anaxnun":f"{mem}{root1}{xiriq}{yod}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{root1}{xiriq}{yod}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{root1}{xiriq}{yod}{root3}{xolammalei}{tav}",}
@@ -1516,36 +1456,36 @@ pealim = {
             },
 
     "avar":{
-        ("הבנתי",):{
+        "הבנתי":{
         "ani":f"{hey}{root1}{root3}{tav_with_mapik}{xiriq}{yod}"
         }
         ,
-        ("הבנת",):{
+        "הבנת":{
         "ata":f"{hey}{root1}{root3}{tav_with_mapik}{qametz}"
         },
-        ("הבנת"):{
+        "הבנת":{
         "at":f"{hey}{root1}{root3}{tav_with_mapik}{shva}"
         },
-        ("הבין"):{
+        "הבין":{
         "hu":f"{hey}{root1}{xiriq}{yod}{root3}"
 
         },
-        ("הבינה"):{
+        "הבינה":{
         "hi":f"{hey}{root1}{xiriq}{yod}{root3}{hey}"
         },
-        ("הבנו"):{
+        "הבנו":{
         "anaxnu":f"{hey}{root1}{root3}{shureq}"
         },
-        ("הבנתם"):{
+        "הבנתם":{
         "atem":f"{hey}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
         },
-        ("הבנתן"):{
+        "הבנתן":{
         "aten":f"{hey}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
         },
-        ("הבינו"):{
+        "הבינו":{
         "hem":f"{hey}{root2}{xiriq}{yod}{root3}{shureq}"
         },
-        ("הבינו"):{
+        "הבינו":{
         "hen":f"{hey}{root2}{xiriq}{yod}{root3}{shureq}"
         },
 
@@ -1553,36 +1493,36 @@ pealim = {
 
     "atid":{
 
-        ("אבין"):{
-        "ani":f"{alef}{root2}{xiriq}{yod}{root3}",
-
-        ("תבין"):{
-        "ata":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}",
-
-        ("תביני"):{
-        "at":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}{xiriq}{yod}",
-
-        ("יבין"):{
-        "hu":f"{yod}{root2}{xiriq}{yod}{root3}",
-
-        ("תבין"):{
-        "hi":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}",
-
-        ("נבין"):{
-        "anaxnu":f"{nun}{root2}{xiriq}{yod}{root3}",
-
-        ("תבינו"):{
-        "atem":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}{shureq}",
-
-        ("תבינו"):{
-        "aten":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}{shureq}",
-
-        ("יבינו"):{
-        "hem":f"{yod}{root2}{xiriq}{yod}{root3}{shureq}",
-
-        ("יבינו"):{
-        "hen":f"{yod}{root2}{xiriq}{yod}{root3}{shureq}",
-
+        "אבין":{
+        "ani":f"{alef}{root2}{xiriq}{yod}{root3}"
+        },
+        "תבין":{
+        "ata":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}"
+        },
+        "תביני":{
+        "at":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}{xiriq}{yod}"
+        },
+        "יבין":{
+        "hu":f"{yod}{root2}{xiriq}{yod}{root3}"
+        },
+        "תבין":{
+        "hi":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}"
+        },
+        "נבין":{
+        "anaxnu":f"{nun}{root2}{xiriq}{yod}{root3}"
+        },
+        "תבינו":{
+        "atem":f"{tav_with_mapik}{root2}{xiriq}{yod}{root3}{shureq}"
+        },
+        "תבינו":{
+        "aten":f"{tav}{root2}{xiriq}{root3}{shureq}"
+        },
+        "יבינו":{
+        "hem":f"{yod}{root2}{xiriq}{root3}{shureq}"
+        },
+        "יבינו":{
+        "hen":f"{yod}{root2}{xiriq}{yod}{root3}{shureq}"
+        }
 
 
 
@@ -1590,22 +1530,22 @@ pealim = {
 
     "lamed_hey_yod":
         "hoveh":
-            ("מרצה",): {
+            "מרצה": {
             "aniz": f"{mem}{root1}{root2}{hey}",
             "ata": f"{mem}{root1}{root2}{hey}",
             "hu": f"{mem}{root1}{root2}{hey}",},
 
-            ("מרצה",): {
+            "מרצה": {
             "anin": f"{mem}{root1}{root2}{hey}",
             "at": f"{mem}{root1}{root2}{hey}",
             "hi": f"{mem}{root1}{root2}{hey}",},
 
-            ("מרצים",): {
+            "מרצים": {
             "anaxnuz": f"{mem}{root1}{root2}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{root1}{root2}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{root1}{root2}{xiriq}{yod}{memsofit}",},
 
-            ("מרצות",): {
+            "מרצות": {
             "anaxnun":f"{mem}{root1}{root2}{xolammalei}{tav}",
             "aten":f"{mem}{root1}{root2}{xolammalei}{tav}",
             "hen":f"{mem}{root1}{root2}{xolammalei}{tav}",}
@@ -1614,36 +1554,36 @@ pealim = {
             },
 
     "avar":{
-        ("הרציתי",):{
+        "הרציתי":{
         "ani":f"{hey}{root1}{root2}{yod}{tav_with_mapik}{xiriq}{yod}"
         }
         ,
-        ("הרצית",):{
+        "הרצית":{
         "ata":f"{hey}{root1}{root2}{yod}{tav_with_mapik}{qametz}"
         },
-        ("הרצית"):{
+        "הרצית":{
         "at":f"{hey}{root1}{root2}{yod}{tav_with_mapik}{shva}"
         },
-        ("הרצה"):{
+        "הרצה":{
         "hu":f"{hey}{root1}{root2}{hey}"
 
         },
-        ("הרצתה"):{
+        "הרצתה":{
         "hi":f"{hey}{root1}{root2}{tav}{hey}"
         },
-        ("הרצינו"):{
+        "הרצינו":{
         "anaxnu":f"{hey}{root1}{root2}{xiriq}{yod}{nun}{shureq}"
         },
-        ("הרציתם"):{
+        "הרציתם":{
         "atem":f"{hey}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{memsofit}"
         },
-        ("הרציתן"):{
+        "הרציתן":{
         "aten":f"{hey}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{nunsofit}"
         },
-        ("הרצו"):{
+        "הרצו":{
         "hem":f"{hey}{root1}{root2}{shureq}"
         },
-        ("הרצו"):{
+        "הרצו":{
         "hen":f"{hey}{root1}{root2}{shureq}"
         },
 
@@ -1651,34 +1591,34 @@ pealim = {
 
     "atid":{
 
-        ("ארצה"):{
+        "ארצה":{
         "ani":f"{alef}{root1}{root2}{hey}",
 
-        ("תרצה"):{
+        "תרצה":{
         "ata":f"{tav_with_mapik}{root1}{root2}{hey}",
 
-        ("תרצי"):{
+        "תרצי":{
         "at":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}",
 
-        ("ירצה"):{
+        "ירצה":{
         "hu":f"{yod}{root1}{root2}{hey}",
 
-        ("תרצה"):{
+        "תרצה":{
         "hi":f"{tav_with_mapik}{root1}{root2}{hey}",
 
-        ("נרצה"):{
+        "נרצה":{
         "anaxnu":f"{nun}{root1}{root2}{hey}",
 
-        ("תרצו"):{
+        "תרצו":{
         "atem":f"{tav_with_mapik}{root1}{root2}{shureq}",
 
-        ("תרצו"):{
+        "תרצו":{
         "aten":f"{tav_with_mapik}{root1}{root2}{shureq}",
 
-        ("ירצו"):{
+        "ירצו":{
         "hem":f"{yod}{root1}{root2}{shureq}",
 
-        ("ירצו"):{
+        "ירצו":{
         "hen":f"{yod}{root1}{root2}{shureq}",
 
 
@@ -1687,22 +1627,22 @@ pealim = {
 #hifil_kapolim-- ע״ע where the last letter of shoresh is same as second to last letter
     "kapolim":
         "hoveh":
-            ("מסב",): {
+            "מסב": {
             "aniz": f"{mem}{root1}{root2}",
             "ata": f"{mem}{root1}{root2}",
             "hu": f"{mem}{root1}{root2}",},
 
-            ("מסיבה",): {
+            "מסיבה": {
             "anin": f"{mem}{shva}{root1}{xiriq}{yod}{root2}{hey}",
             "at": f"{mem}{shva}{root1}{xiriq}{yod}{root2}{hey}",
             "hi": f"{mem}{shva}{root1}{xiriq}{yod}{root2}{hey}",},
 
-            ("מסיבים",): {
+            "מסיבים": {
             "anaxnuz": f"{mem}{shva}{root1}{xiriq}{yod}{root2}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{shva}{root1}{xiriq}{yod}{root2}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{shva}{root1}{xiriq}{yod}{root2}{xiriq}{yod}{memsofit}",},
 
-            ("מסיבות",): {
+            "מסיבות": {
             "anaxnun":f"{mem}{shva}{root1}{xiriq}{yod}{root2}{xolammalei}{tav}",
             "aten":f"{mem}{shva}{root1}{xiriq}{yod}{root2}{xolammalei}{tav}",
             "hen":f"{mem}{shva}{root1}{xiriq}{yod}{root2}{xolammalei}{tav}",}
@@ -1711,36 +1651,36 @@ pealim = {
             },
 
         "avar":{
-            ("הסבתי/הסבותי",):{
+            "הסבתי/הסבותי":{
             "ani":f"{hey}{root1}{root2}{tav_with_mapik}{xiriq}{yod}/{hey}{root1}{root2}{xolammalei}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("הסבות/הסבת",):{
+            "הסבות/הסבת":{
             "ata":f"{hey}{root1}{root2}{tav_with_mapik}{qametz}/{hey}{root1}{root2}{xolammalei}{tav_with_mapik}{qametz}"
             },
-            ("הסבות/הסבת"):{
+            "הסבות/הסבת":{
             "at":f"{hey}{root1}{root2}{tav_with_mapik}{shva}/{hey}{root1}{root2}{xolammalei}{tav_with_mapik}{shva}"
             },
-            ("הסב"):{
+            "הסב":{
             "hu":f"{hey}{root1}{root2}"
 
             },
-            ("הסבה"):{
+            "הסבה":{
             "hi":f"{hey}{root1}{root2}{hey}"
             },
-            ("הסבנו/הסבונו"):{
+            "הסבנו/הסבונו":{
             "anaxnu":f"{hey}{root1}{root2}{nun}{shureq}/{hey}{root1}{root2}{xolammalei}{nun}{shureq}"
             },
-            ("הסבותם/הסבתם"):{
+            "הסבותם/הסבתם":{
             "atem":f"{hey}{root1}{root2}{tav_with_mapik}{segol}{memsofit}/{hey}{root1}{root2}{xolammalei}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("הסבותן/הסבתן"):{
+            "הסבותן/הסבתן":{
             "aten":f"{hey}{root1}{root2}{tav_with_mapik}{segol}{nunsofit}/{hey}{root1}{root2}{xolammalei}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("הסבו"):{
+            "הסבו":{
             "hem":f"{hey}{root1}{root2}{shureq}"
             },
-            ("הסבו"):{
+            "הסבו":{
             "hen":f"{hey}{root1}{root2}{shureq}"
             },
 
@@ -1748,56 +1688,56 @@ pealim = {
 
         "atid":{
 
-            ("אסב"):{
+            "אסב":{
             "ani":f"{alef}{root1}{root2}",
 
-            ("תסב"):{
+            "תסב":{
             "ata":f"{tav_with_mapik}{root1}{root2}",
 
-            ("תסבי"):{
+            "תסבי":{
             "at":f"{tav_with_mapik}{root1}{root2}{xiriq}{yod}",
 
-            ("יסב"):{
+            "יסב":{
             "hu":f"{yod}{root1}{root2}",
 
-            ("תסב"):{
+            "תסב":{
             "hi":f"{tav_with_mapik}{root1}{root2}",
 
-            ("נסב"):{
+            "נסב":{
             "anaxnu":f"{nun}{root1}{root2}",
 
-            ("תסבו"):{
+            "תסבו":{
             "atem":f"{tav_with_mapik}{root1}{root2}{shureq}",
 
-            ("תסבו"):{
+            "תסבו":{
             "aten":f"{tav_with_mapik}{root1}{root2}{shureq}",
 
-            ("יסבו"):{
+            "יסבו":{
             "hem":f"{yod}{root1}{root2}{shureq}",
 
-            ("יסבו"):{
+            "יסבו":{
             "hen":f"{yod}{root1}{root2}{shureq}",
 
 
 "hitpael":
     "shlemim":
         "hoveh":
-            ("מתרגש",): {
+            "מתרגש": {
             "aniz": f"{mem}{xiriq}{tav}{root1}{root2}{root3}",
             "ata": f"{mem}{xiriq}{tav}{root1}{root2}{root3}",
             "hu": f"{mem}{xiriq}{tav}{root1}{root2}{root3}",},
 
-            ("מתרגשת",): {
+            "מתרגשת": {
             "anin":f"{mem}{xiriq}{tav}{root1}{root2}{root3}{tav}",
             "at": f"{mem}{xiriq}{tav}{root1}{root2}{root3}{tav}",
             "hi": f"{mem}{xiriq}{tav}{root1}{root2}{root3}{tav}",},
 
-            ("מתרגשים",): {
+            "מתרגשים": {
             "anaxnuz": f"{mem}{xiriq}{tav}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{tav}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{tav}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מתרגשות",): {
+            "מתרגשות": {
             "anaxnun":f"{mem}{xiriq}{tav}{root1}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{tav}{root1}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{tav}{root1}{root2}{root3}{xolammalei}{tav}",}
@@ -1806,36 +1746,36 @@ pealim = {
             },
 
         "avar":{
-            ("התרגשתי",):{
+            "התרגשתי":{
             "ani":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("התרגשת",):{
+            "התרגשת":{
             "ata":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("התרגשת"):{
+            "התרגשת":{
             "at":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("התרגש"):{
+            "התרגש":{
             "hu":f"{hey}{xiriq}{tav}{root1}{root2}{root3}"
 
             },
-            ("התרגשה"):{
+            "התרגשה":{
             "hi":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{hey}"
             },
-            ("התרגשנו"):{
+            "התרגשנו":{
             "anaxnu":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{nun}{shureq}"
             },
-            ("התרגשתם"):{
+            "התרגשתם":{
             "atem":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("התרגשתן"):{
+            "התרגשתן":{
             "aten":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("התרגשו"):{
+            "התרגשו":{
             "hem":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{shureq}"
             },
-            ("התרגשו"):{
+            "התרגשו":{
             "hen":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{tav_with_mapik}{segol}"
             },
 
@@ -1843,34 +1783,34 @@ pealim = {
 
         "atid":{
 
-            ("אתרגש"):{
+            "אתרגש":{
             "ani":f"{alef}{tav}{root1}{root2}{root3}",
 
-            ("תתרגש"):{
+            "תתרגש":{
             "ata":f"{tav_with_mapik}{tav}{root1}{root2}{root3}",
 
-            ("תתרגשי"):{
+            "תתרגשי":{
             "at":f"{tav_with_mapik}{tav}{root1}{root2}{root3}{xiriq}{yod}",
 
-            ("יתרגש"):{
+            "יתרגש":{
             "hu":f"{yod}{tav}{root1}{root2}{root3}",
 
-            ("תתרגש"):{
+            "תתרגש":{
             "hi":f"{tav_with_mapik}{tav}{root1}{root2}{root3}",
 
-            ("נתרגש"):{
+            "נתרגש":{
             "anaxnu":f"{nun}{tav}{root1}{root2}{root3}",
 
-            ("תתרגשו"):{
+            "תתרגשו":{
             "atem":f"{tav_with_mapik}{tav}{root1}{root2}{root3}{shureq}",
 
-            ("תתרגשו"):{
+            "תתרגשו":{
             "aten":f"{tav_with_mapik}{tav}{root1}{root2}{root3}{shureq}",
 
-            ("יתרגשו"):{
+            "יתרגשו":{
             "hem":f"{yod}{tav}{root1}{root2}{root3}{shureq}",
 
-            ("יתרגשו"):{
+            "יתרגשו":{
             "hen":f"{yod}{tav}{root1}{root2}{root3}{shureq}",
 
 
@@ -1878,22 +1818,22 @@ pealim = {
 
     "samech_tav":
         "hoveh":
-            ("מסתלק",): {
+            "מסתלק": {
             "aniz": f"{mem}{xiriq}{samech}{tav}{root2}{root3}",
             "ata": f"{mem}{xiriq}{samech}{tav}{root2}{root3}",
             "hu": f"{mem}{xiriq}{samech}{tav}{root2}{root3}",},
 
-            ("מסתלקת",): {
+            "מסתלקת": {
             "anin": f"{mem}{xiriq}{samech}{tav}{root2}{root3}{tav}",
             "at": f"{mem}{xiriq}{samech}{tav}{root2}{root3}{tav}",
             "hi": f"{mem}{xiriq}{samech}{tav}{root2}{root3}{tav}",},
 
-            ("מסתלקים",): {
+            "מסתלקים": {
             "anaxnuz": f"{mem}{xiriq}{samech}{tav}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{samech}{tav}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{samech}{tav}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מסתלקות",): {
+            "מסתלקות": {
             "anaxnun":f"{mem}{xiriq}{samech}{tav}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{samech}{tav}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{samech}{tav}{root2}{root3}{xolammalei}{tav}",}
@@ -1902,70 +1842,70 @@ pealim = {
             },
 
         "avar":{
-            ("הסתלקתי",):{
+            "הסתלקתי":{
             "ani":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("הסתלקת",):{
+            "הסתלקת":{
             "ata":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("הסתלקת"):{
+            "הסתלקת":{
             "at":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("הסתלק"):{
+            "הסתלק":{
             "hu":f"{hey}{xiriq}{samech}{tav}{root2}{root3}"
 
             },
-            ("הסתלקה"):{
+            "הסתלקה":{
             "hi":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{hey}"
             },
-            ("הסתלקנו"):{
+            "הסתלקנו":{
             "anaxnu":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{nun}{shureq}"
             },
-            ("הסתלקתם"):{
+            "הסתלקתם":{
             "atem":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("הסתלקתן"):{
+            "הסתלקתן":{
             "aten":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("הסתלקו"):{
+            "הסתלקו":{
             "hem":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{shureq}"
             },
-            ("הסתלקו"):{
+            "הסתלקו":{
             "hen":f"{hey}{xiriq}{samech}{tav}{root2}{root3}{shureq}"
             },
 
 
         "atid":{
 
-            ("אסתלק"):{
+            "אסתלק":{
             "ani":f"{alef}{samech}{tav}{root2}{root3}",
 
-            ("תסתלק"):{
+            "תסתלק":{
             "ata":f"{tav_with_mapik}{samech}{tav}{root2}{root3}",
 
-            ("תסתלקי"):{
+            "תסתלקי":{
             "at":f"{tav_with_mapik}{samech}{tav}{root2}{root3}{xiriq}{yod}",
 
-            ("יסתלק"):{
+            "יסתלק":{
             "hu":f"{yod}{samech}{tav}{root2}{root3}",
 
-            ("תסתלק"):{
+            "תסתלק":{
             "hi":f"{tav_with_mapik}{samech}{tav}{root2}{root3}"
 
-            ("נסתלק"):{
+            "נסתלק":{
             "anaxnu":f"{nun}{samech}{tav}{root2}{root3}",
 
-            ("תסתלקו"):{
+            "תסתלקו":{
             "atem":f"{tav_with_mapik}{samech}{tav}{root2}{root3}{shureq}",
 
-            ("תסתלקו"):{
+            "תסתלקו":{
             "aten":f"{tav_with_mapik}{samech}{tav}{root2}{root3}{shureq}",
 
-            ("יסתלקו"):{
+            "יסתלקו":{
             "hem":f"{yod}{samech}{tav}{root2}{root3}{shureq}",
 
-            ("יסתלקו"):{
+            "יסתלקו":{
             "hen":f"{yod}{samech}{tav}{root2}{root3}{shureq}",
 
 
@@ -1973,22 +1913,22 @@ pealim = {
 
     "ayin_yod_vav":
         "hoveh":
-            ("מתעורר",): {
+            "מתעורר": {
             "aniz": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}",
             "ata": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}",
             "hu": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}",},
 
-            ("מתעוררת",): {
+            "מתעוררת": {
             "anin": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav}",
             "at": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav}",
             "hi": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav}",},
 
-            ("מתעוררים",): {
+            "מתעוררים": {
             "anaxnuz": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מתעוררות",): {
+            "מתעוררות": {
             "anaxnun":f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{tav}{root1}{vav}{root3}{root3}{xolammalei}{tav}",}
@@ -1997,36 +1937,36 @@ pealim = {
             },
 
         "avar":{
-            ("התעוררתי",):{
+            "התעוררתי":{
             "ani":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("התעוררת",):{
+            "התעוררת":{
             "ata":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav_with_mapik}{qametz}"
             },
-            ("התעוררת"):{
+            "התעוררת":{
             "at":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav_with_mapik}{shva}"
             },
-            ("התעורר"):{
+            "התעורר":{
             "hu":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}"
 
             },
-            ("התעוררה"):{
+            "התעוררה":{
             "hi":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{hey}"
             },
-            ("התעוררנו"):{
+            "התעוררנו":{
             "anaxnu":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{nun}{shureq}"
             },
-            ("התעוררתם"):{
+            "התעוררתם":{
             "atem":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("התעוררתן"):{
+            "התעוררתן":{
             "aten":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("התעוררו"):{
+            "התעוררו":{
             "hem":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{shureq}"
             },
-            ("התעוררו"):{
+            "התעוררו":{
             "hen":f"{hey}{xiriq}{tav}{root1}{vav}{root3}{root3}{shureq}"
             },
 
@@ -2034,34 +1974,34 @@ pealim = {
 
         "atid":{
 
-            ("אתעורר"):{
+            "אתעורר":{
             "ani":f"{alef}{tav}{root1}{vav}{root3}{root3}",
 
-            ("תתעורר"):{
+            "תתעורר":{
             "ata":f"{tav_with_mapik}{tav}{root1}{vav}{root3}{root3}",
 
-            ("תתעוררי"):{
+            "תתעוררי":{
             "at":f"{tav_with_mapik}{tav}{root1}{vav}{root3}{root3}{xiriq}{yod}",
 
-            ("יתעורר"):{
+            "יתעורר":{
             "hu":f"{yod}{tav}{root1}{vav}{root3}{root3}",
 
-            ("תתעורר"):{
+            "תתעורר":{
             "hi":f"{tav_with_mapik}{tav}{root1}{vav}{root3}{root3}",
 
-            ("נתעורר"):{
+            "נתעורר":{
             "anaxnu":f"{nun}{tav}{root1}{vav}{root3}{root3}",
 
-            ("תתעוררו"):{
+            "תתעוררו":{
             "atem":f"{tav_with_mapik}{tav}{root1}{vav}{root3}{root3}{shureq}",
 
-            ("תתעוררו"):{
+            "תתעוררו":{
             "aten":f"{tav_with_mapik}{tav}{root1}{vav}{root3}{root3}{shureq}",
 
-            ("יתעוררו"):{
+            "יתעוררו":{
             "hem":f"{yod}{tav}{root1}{vav}{root3}{root3}{shureq}",
 
-            ("יתעוררו"):{
+            "יתעוררו":{
             "hen":f"{yod}{tav}{root1}{vav}{root3}{root3}{shureq}",
 
 
@@ -2070,22 +2010,22 @@ pealim = {
 
     "lamed_alef":
         "hoveh":
-            ("מתמצא",): {
+            "מתמצא": {
             "aniz": f"{mem}{xiriq}{tav}{root1}{root2}{alef}",
             "ata": f"{mem}{xiriq}{tav}{root1}{root2}{alef}",
             "hu": f"{mem}{xiriq}{tav}{root1}{root2}{alef}",},
 
-            ("מתמצאת",): {
+            "מתמצאת": {
             "anin": f"{mem}{xiriq}{tav}{root1}{root2}{alef}{tav}",
             "at": f"{mem}{xiriq}{tav}{root1}{root2}{alef}{tav}",
             "hi": f"{mem}{xiriq}{tav}{root1}{root2}{alef}{tav}",},
 
-            ("מתמצאים",): {
+            "מתמצאים": {
             "anaxnuz": f"{mem}{xiriq}{tav}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{tav}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{tav}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",},
 
-            ("מתמצאות",): {
+            "מתמצאות": {
             "anaxnun":f"{mem}{xiriq}{tav}{root1}{root2}{alef}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{tav}{root1}{root2}{alef}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{tav}{root1}{root2}{alef}{xolammalei}{tav}",}
@@ -2094,70 +2034,70 @@ pealim = {
             },
 
         "avar":{
-            ("התמצאתי",):{
+            "התמצאתי":{
             "ani":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("התמצאת",):{
+            "התמצאת":{
             "ata":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{tav_with_mapik}{qametz}"
             },
-            ("התמצאת"):{
+            "התמצאת":{
             "at":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{tav_with_mapik}{shva}"
             },
-            ("התמצא"):{
+            "התמצא":{
             "hu":f"{hey}{xiriq}{tav}{root1}{root2}{alef}"
 
             },
-            ("התמצאה"):{
+            "התמצאה":{
             "hi":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{hey}"
             },
-            ("התמצאנו"):{
+            "התמצאנו":{
             "anaxnu":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{nun}{shureq}"
             },
-            ("התמצאתם"):{
+            "התמצאתם":{
             "atem":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("התמצאתן"):{
+            "התמצאתן":{
             "aten":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("התמצאו"):{
+            "התמצאו":{
             "hem":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{shureq}"
             },
-            ("התמצאו"):{
+            "התמצאו":{
             "hen":f"{hey}{xiriq}{tav}{root1}{root2}{alef}{shureq}"
             },
 
 
         "atid":{
 
-            ("אתמצא"):{
+            "אתמצא":{
             "ani":f"{alef}{tav}{root1}{root2}{root3}",
 
-            ("תתמצא"):{
+            "תתמצא":{
             "ata":f"{tav_with_mapik}{tav}{root1}{root2}{root3}",
 
-            ("תתמצאי"):{
+            "תתמצאי":{
             "at":f"{tav_with_mapik}{tav}{root1}{root2}{root3}{xiriq}{yod}",
 
-            ("יתמצא"):{
+            "יתמצא":{
             "hu":f"{yod}{tav}{root1}{root2}{root3}",
 
-            ("תתמצא"):{
+            "תתמצא":{
             "hi":f"{tav_with_mapik}{tav}{root1}{root2}{root3}",
 
-            ("נתמצא"):{
+            "נתמצא":{
             "anaxnu":f"{nun}{tav}{root1}{root2}{root3}",
 
-            ("תתמצאו"):{
+            "תתמצאו":{
             "atem":f"{tav_with_mapik}{tav}{root1}{root2}{root3}{shureq}",
 
-            ("תתמצאו"):{
+            "תתמצאו":{
             "aten":f"{tav_with_mapik}{tav}{root1}{root2}{root3}{shureq}",
 
-            ("יתמצאו"):{
+            "יתמצאו":{
             "hem":f"{yod}{tav}{root1}{root2}{root3}{shureq}",
 
-            ("יתמצאו"):{
+            "יתמצאו":{
             "hen":f"{yod}{tav}{root1}{root2}{root3}{shureq}",
 
 
@@ -2166,22 +2106,22 @@ pealim = {
 
     "tzadi_tet":
         "hoveh":
-            ("מצטער",): {
+            "מצטער": {
             "aniz": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}",
             "ata": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}",
             "hu": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}",},
 
-            ("מצטערת",): {
+            "מצטערת": {
             "anin":f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{tav}",
             "at": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{tav}",
             "hi": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{tav}",},
 
-            ("מצטערים",): {
+            "מצטערים": {
             "anaxnuz": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מצטערות",): {
+            "מצטערות": {
             "anaxnun":f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{tzadi}{tet}{root2}{root3}{xolammalei}{tav}",}
@@ -2190,36 +2130,36 @@ pealim = {
             },
 
         "avar":{
-            ("הצטערתי",):{
+            "הצטערתי":{
             "ani":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("הצטערת",):{
+            "הצטערת":{
             "ata":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("הצטערת"):{
+            "הצטערת":{
             "at":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("הצטער"):{
+            "הצטער":{
             "hu":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}"
 
             },
-            ("הצטערה"):{
+            "הצטערה":{
             "hi":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{hey}"
             },
-            ("הצטערנו"):{
+            "הצטערנו":{
             "anaxnu":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{nun}{shureq}"
             },
-            ("הצטערתם"):{
+            "הצטערתם":{
             "atem":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("הצטערתן"):{
+            "הצטערתן":{
             "aten":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("הצטערו"):{
+            "הצטערו":{
             "hem":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}"
             },
-            ("הצטערו"):{
+            "הצטערו":{
             "hen":f"{hey}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}"
             },
 
@@ -2227,34 +2167,34 @@ pealim = {
 
         "atid":{
 
-            ("אצטער"):{
+            "אצטער":{
             "ani":f"{alef}{tzadi}{tet}{root2}{root3}",
 
-            ("תצטער"):{
+            "תצטער":{
             "ata":f"{tav_with_mapik}{xiriq}{tzadi}{tet}{root2}{root3}",
 
-            ("תצטערי"):{
+            "תצטערי":{
             "at":f"{tav_with_mapik}{xiriq}{tzadi}{tet}{root2}{root3}{xiriq}{yod}",
 
-            ("יצטער"):{
+            "יצטער":{
             "hu":f"{yod}{xiriq}{tzadi}{tet}{root2}{root3}",
 
-            ("תצטער"):{
+            "תצטער":{
             "hi":f"{tav_with_mapik}{xiriq}{tzadi}{tet}{root2}{root3}",
 
-            ("נצטער"):{
+            "נצטער":{
             "anaxnu":f"{nun}{xiriq}{tzadi}{tet}{root2}{root3}",
 
-            ("תצטערו"):{
+            "תצטערו":{
             "atem":f"{tav_with_mapik}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}",
 
-            ("תצטערו"):{
+            "תצטערו":{
             "aten":f"{tav_with_mapik}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}",
 
-            ("יצטערו"):{
+            "יצטערו":{
             "hem":f"{yod}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}",
 
-            ("יצטערו"):{
+            "יצטערו":{
             "hen":f"{yod}{xiriq}{tzadi}{tet}{root2}{root3}{shureq}",
 
 
@@ -2263,22 +2203,22 @@ pealim = {
 
     "zayin_dalet":
         "hoveh":
-            ("מזדקן",): {
+            "מזדקן": {
             "aniz": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}",
             "ata": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}",
             "hu": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}",},
 
-            ("מזדקנת",): {
+            "מזדקנת": {
             "anin": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{tav}",
             "at": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{tav}",
             "hi": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{tav}",},
 
-            ("מזדקנים",): {
+            "מזדקנים": {
             "anaxnuz": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("מזדקנות",): {
+            "מזדקנות": {
             "anaxnun":f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{zayin}{dalet}{root2}{root3}{xolammalei}{tav}",}
@@ -2287,36 +2227,36 @@ pealim = {
             },
 
         "avar":{
-            ("הזדקנתי",):{
+            "הזדקנתי":{
             "ani":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("הזדקנת",):{
+            "הזדקנת":{
             "ata":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("הזדקנת"):{
+            "הזדקנת":{
             "at":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("הזדקן"):{
+            "הזדקן":{
             "hu":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}"
 
             },
-            ("הזדקנה"):{
+            "הזדקנה":{
             "hi":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{hey}"
             },
-            ("הזדקנו"):{
+            "הזדקנו":{
             "anaxnu":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{nun}{shureq}"
             },
-            ("הזדקנתם"):{
+            "הזדקנתם":{
             "atem":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("הזדקנתן"):{
+            "הזדקנתן":{
             "aten":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("הזדקנו"):{
+            "הזדקנו":{
             "hem":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}"
             },
-            ("הזדקנו"):{
+            "הזדקנו":{
             "hen":f"{hey}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}"
             },
 
@@ -2324,34 +2264,34 @@ pealim = {
 
         "atid":{
 
-            ("אזדקן"):{
+            "אזדקן":{
             "ani":f"{alef}{zayin}{dalet}{root2}{root3}",
 
-            ("תזדקן"):{
+            "תזדקן":{
             "ata":f"{tav_with_mapik}{xiriq}{zayin}{dalet}{root2}{root3}",
 
-            ("תזדקני"):{
+            "תזדקני":{
             "at":f"{tav_with_mapik}{xiriq}{zayin}{dalet}{root2}{root3}{xiriq}{yod}",
 
-            ("יזדקן"):{
+            "יזדקן":{
             "hu":f"{yod}{xiriq}{zayin}{dalet}{root2}{root3}",
 
-            ("תזדקן"):{
+            "תזדקן":{
             "hi":f"{tav_with_mapik}{xiriq}{zayin}{dalet}{root2}{root3}",
 
-            ("נזדקן"):{
+            "נזדקן":{
             "anaxnu":f"{nun}{xiriq}{zayin}{dalet}{root2}{root3}",
 
-            ("תזדקנו"):{
+            "תזדקנו":{
             "atem":f"{tav_with_mapik}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}",
 
-            ("תזדקנו"):{
+            "תזדקנו":{
             "aten":f"{tav_with_mapik}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}",
 
-            ("יזדקנו"):{
+            "יזדקנו":{
             "hem":f"{yod}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}",
 
-            ("יזדקנו"):{
+            "יזדקנו":{
             "hen":f"{yod}{xiriq}{zayin}{dalet}{root2}{root3}{shureq}",
 
 
@@ -2360,22 +2300,22 @@ pealim = {
 
     "shin_sin_tav":
         "hoveh":
-            ("משתפר",): {
+            "משתפר": {
             "aniz": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}",
             "ata": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}",
             "hu": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}",},
 
-            ("משתפרת",): {
+            "משתפרת": {
             "anin": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{tav}",
             "at": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{tav}",
             "hi": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{tav}",},
 
-            ("משתפרים",): {
+            "משתפרים": {
             "anaxnuz": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("משתפרות",): {
+            "משתפרות": {
             "anaxnun":f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{xolammalei}{tav}}{tav}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{mem}{xiriq}{shin_sin}{tav}{root2}{root3}{xolammalei}{tav}",}
@@ -2384,70 +2324,70 @@ pealim = {
             },
 
         "avar":{
-            ("השתפרתי",):{
+            "השתפרתי":{
             "ani":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("השתפרת",):{
+            "השתפרת":{
             "ata":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("השתפרת"):{
+            "השתפרת":{
             "at":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("השתפר"):{
+            "השתפר":{
             "hu":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}"
 
             },
-            ("השתפרה"):{
+            "השתפרה":{
             "hi":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{hey}"
             },
-            ("השתפרנו"):{
+            "השתפרנו":{
             "anaxnu":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{nun}{shva}"
             },
-            ("השתפרתם"):{
+            "השתפרתם":{
             "atem":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("השתפרתן"):{
+            "השתפרתן":{
             "aten":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("השתפרו"):{
+            "השתפרו":{
             "hem":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}"
             },
-            ("השתפרו"):{
+            "השתפרו":{
             "hen":f"{hey}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}"
             },
 
 
         "atid":{
 
-            ("אשתפר"):{
+            "אשתפר":{
             "ani":f"{alef}{shin_sin}{tav}{root2}{root3}",
 
-            ("תשתפר"):{
+            "תשתפר":{
             "ata":f"{tav_with_mapik}{xiriq}{shin_sin}{tav}{root2}{root3}",
 
-            ("תשתפרי"):{
+            "תשתפרי":{
             "at":f"{tav_with_mapik}{xiriq}{shin_sin}{tav}{root2}{root3}{xiriq}{yod}",
 
-            ("ישתפר"):{
+            "ישתפר":{
             "hu":f"{yod}{xiriq}{shin_sin}{tav}{root2}{root3}",
 
-            ("תשתפר"):{
+            "תשתפר":{
             "hi":f"{tav_with_mapik}{xiriq}{shin_sin}{tav}{root2}{root3}",
 
-            ("נשתפר"):{
+            "נשתפר":{
             "anaxnu":f"{nun}{xiriq}{shin_sin}{tav}{root2}{root3}",
 
-            ("תשתפרו"):{
+            "תשתפרו":{
             "atem":f"{tav_with_mapik}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}",
 
-            ("תשתפרו"):{
+            "תשתפרו":{
             "aten":f"{tav_with_mapik}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}",
 
-            ("ישתפרו"):{
+            "ישתפרו":{
             "hem":f"{yod}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}",
 
-            ("ישתפרו"):{
+            "ישתפרו":{
             "hen":f"{yod}{xiriq}{shin_sin}{tav}{root2}{root3}{shureq}",
 
 
@@ -2455,22 +2395,22 @@ pealim = {
 
     "lamed_hey_yod":
         "hoveh":
-            ("מתגלה",): {
+            "מתגלה": {
             "aniz": f"{memsofit}{xiriq}{tav}{root1}{root2}{hey}",
             "ata": f"{memsofit}{xiriq}{tav}{root1}{root2}{hey}",
             "hu": f"{memsofit}{xiriq}{tav}{root1}{root2}{hey}",},
 
-            ("מתגלה",): {
+            "מתגלה": {
             "anin": f"{memsofit}{xiriq}{tav}{root1}{root2}{hey}",
             "at": f"{memsofit}{xiriq}{tav}{root1}{root2}{hey}",
             "hi": f"{memsofit}{xiriq}{tav}{root1}{root2}{hey}",},
 
-            ("מתגלים",): {
+            "מתגלים": {
             "anaxnuz": f"{memsofit}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{memsofit}",
             "atem": f"{memsofit}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{memsofit}",
             "hem": f"{memsofit}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{memsofit}",},
 
-            ("מתגלות",): {
+            "מתגלות": {
             "anaxnun":f"{memsofit}{xiriq}{tav}{root1}{root2}{xolammalei}{tav}",
             "aten":f"{memsofit}{xiriq}{tav}{root1}{root2}{xolammalei}{tav}",
             "hen":f"{memsofit}{xiriq}{tav}{root1}{root2}{xolammalei}{tav}",}
@@ -2479,36 +2419,36 @@ pealim = {
             },
 
         "avar":{
-            ("התגליתי",):{
+            "התגליתי":{
             "ani":f"{hey}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("התגלית",):{
+            "התגלית":{
             "ata":f"{hey}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{qametz}"
             },
-            ("התגלית"):{
+            "התגלית":{
             "at":f"{hey}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{shva}"
             },
-            ("התגלה"):{
+            "התגלה":{
             "hu":f"{hey}{xiriq}{tav}{root1}{root2}{hey}"
 
             },
-            ("התגלתה"):{
+            "התגלתה":{
             "hi":f"{hey}{xiriq}{tav}{root1}{root2}{tav}{hey}"
             },
-            ("התגלינו"):{
+            "התגלינו":{
             "anaxnu":f"{hey}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{nun}{shureq}"
             },
-            ("התגליתם"):{
+            "התגליתם":{
             "atem":f"{hey}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("התגליתן"):{
+            "התגליתן":{
             "aten":f"{hey}{xiriq}{tav}{root1}{root2}{xiriq}{yod}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("התגלו"):{
+            "התגלו":{
             "hem":f"{hey}{xiriq}{tav}{root1}{root2}{shureq}"
             },
-            ("התגלו"):{
+            "התגלו":{
             "hen":f"{hey}{xiriq}{tav}{root1}{root2}{shureq}"
             },
 
@@ -2516,56 +2456,56 @@ pealim = {
 
         "atid":{
 
-            ("אתגלה"):{
+            "אתגלה":{
             "ani":f"{alef}{tav}{root1}{root2}{hey}",
 
-            ("תתגלה"):{
+            "תתגלה":{
             "ata":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{hey}",
 
-            ("תתגלי"):{
+            "תתגלי":{
             "at":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{xiriq}{yod}",
 
-            ("יתגלה"):{
+            "יתגלה":{
             "hu":f"{yod}{xiriq}{tav}{root1}{root2}{hey}",
 
-            ("תתגלה"):{
+            "תתגלה":{
             "hi":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{hey}",
 
-            ("נתגלה"):{
+            "נתגלה":{
             "anaxnu":f"{nun}{xiriq}{tav}{root1}{root2}{hey}",
 
-            ("תתגלו"):{
+            "תתגלו":{
             "atem":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{shureq}",
 
-            ("תתגלו"):{
+            "תתגלו":{
             "aten":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{shureq}",
 
-            ("יתגלו"):{
+            "יתגלו":{
             "hem":f"{yod}{xiriq}{tav}{root1}{root2}{shureq}",
 
-            ("יתגלו"):{
+            "יתגלו":{
             "hen":f"{yod}{xiriq}{tav}{root1}{root2}{shureq}",
 
 
 
     "merubayim":
         "hoveh":
-            ("מתבלבל",): {
+            "מתבלבל": {
             "aniz": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}",
             "ata": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}",
             "hu": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}",},
 
-            ("מתבלבלת",): {
+            "מתבלבלת": {
             "anin": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav}",
             "at": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav}",
             "hi": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav}",},
 
-            ("מתבלבלים",): {
+            "מתבלבלים": {
             "anaxnuz": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{xiriq}{yod}{memsofit}",
             "atem": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{xiriq}{yod}{memsofit}",
             "hem": f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{xiriq}{yod}{memsofit}",},
 
-            ("מתבלבלות",): {
+            "מתבלבלות": {
             "anaxnun":f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{xolammalei}{tav}",
             "aten":f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{xolammalei}{tav}",
             "hen":f"{memsofit}{xiriq}{tav}{root1}{root2}{root3}{root4}{xolammalei}{tav}",}
@@ -2574,36 +2514,36 @@ pealim = {
             },
 
         "avar":{
-            ("התבלבלתי",):{
+            "התבלבלתי":{
             "ani":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("התבלבלת",):{
+            "התבלבלת":{
             "ata":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav_with_mapik}{qametz}"
             },
-            ("התבלבלת"):{
+            "התבלבלת":{
             "at":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav_with_mapik}{shva}"
             },
-            ("התבלבל"):{
+            "התבלבל":{
             "hu":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}"
 
             },
-            ("התבלבלה"):{
+            "התבלבלה":{
             "hi":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{hey}"
             },
-            ("התבלבלנו"):{
+            "התבלבלנו":{
             "anaxnu":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{nun}{shureq}"
             },
-            ("התבלבלתם"):{
+            "התבלבלתם":{
             "atem":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("התבלבלתן"):{
+            "התבלבלתן":{
             "aten":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("התבלבלו"):{
+            "התבלבלו":{
             "hem":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}"
             },
-            ("התבלבלו"):{
+            "התבלבלו":{
             "hen":f"{hey}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}"
             },
 
@@ -2611,34 +2551,34 @@ pealim = {
 
         "atid":{
 
-            ("אתבלבל"):{
+            "אתבלבל":{
             "ani":f"{alef}{tav}{root1}{root2}{root3}{root4}",
 
-            ("תתבלבל"):{
+            "תתבלבל":{
             "ata":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{root3}{root4}",
 
-            ("תתבלבלי"):{
+            "תתבלבלי":{
             "at":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{root3}{root4}{xiriq}{yod}",
 
-            ("יתבלבל"):{
+            "יתבלבל":{
             "hu":f"{yod}{xiriq}{tav}{root1}{root2}{root3}{root4}",
 
-            ("תתבלבל"):{
+            "תתבלבל":{
             "hi":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{root3}{root4}",
 
-            ("נתבלבל"):{
+            "נתבלבל":{
             "anaxnu":f"{nun}{xiriq}{tav}{root1}{root2}{root3}{root4}",
 
-            ("תתבלבלו"):{
+            "תתבלבלו":{
             "atem":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}",
 
-            ("תתבלבלו"):{
+            "תתבלבלו":{
             "aten":f"{tav_with_mapik}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}",
 
-            ("יתבלבלו"):{
+            "יתבלבלו":{
             "hem":f"{yod}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}",
 
-            ("יתבלבלו"):{
+            "יתבלבלו":{
             "hen":f"{yod}{xiriq}{tav}{root1}{root2}{root3}{root4}{shureq}",
 
 
@@ -2648,22 +2588,22 @@ pealim = {
 "nifal":
     "shlemim":
         "hoveh":
-            ("נכנס",): {
+            "נכנס": {
             "aniz": f"{nun}{xiriq}{root1}{root2}{root3}",
             "ata": f"{nun}{xiriq}{root1}{root2}{root3}",
             "hu": f"{nun}{xiriq}{root1}{root2}{root3}",},
 
-            ("נכנסת",): {
+            "נכנסת": {
             "anin": f"{nun}{xiriq}{root1}{root2}{root3}{tav}",
             "at": f"{nun}{xiriq}{root1}{root2}{root3}{tav}",
             "hi": f"{nun}{xiriq}{root1}{root2}{root3}{tav}",},
 
-            ("נכנסים",): {
+            "נכנסים": {
             "anaxnuz": f"{nun}{xiriq}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
             "atem": f"{nun}{xiriq}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",
             "hem": f"{nun}{xiriq}{root1}{root2}{root3}{xiriq}{yod}{memsofit}",},
 
-            ("נכנסות",): {
+            "נכנסות": {
             "anaxnun":f"{nun}{xiriq}{root1}{root2}{root3}{xolammalei}{tav}",
             "aten":f"{nun}{xiriq}{root1}{root2}{root3}{xolammalei}{tav}",
             "hen":f"{nun}{xiriq}{root1}{root2}{root3}{xolammalei}{tav}",}
@@ -2672,36 +2612,36 @@ pealim = {
             },
 
         "avar":{
-            ("ניכנסתי",):{
+            "ניכנסתי":{
             "ani":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("ניכנסת",):{
+            "ניכנסת":{
             "ata":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("ניכנסת"):{
+            "ניכנסת":{
             "at":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("ניכנס"):{
+            "ניכנס":{
             "hu":f"{nun}{xiriq}{yod}{root1}{root2}{root3}"
 
             },
-            ("ניכנסה"):{
+            "ניכנסה":{
             "hi":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{hey}"
             },
-            ("ניכנסנו"):{
+            "ניכנסנו":{
             "anaxnu":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{nun}{shureq}"
             },
-            ("ניכנסתם"):{
+            "ניכנסתם":{
             "atem":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("ניכנסתן"):{
+            "ניכנסתן":{
             "aten":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("ניכנסו"):{
+            "ניכנסו":{
             "hem":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{shureq}"
             },
-            ("ניכנסו"):{
+            "ניכנסו":{
             "hen":f"{nun}{xiriq}{yod}{root1}{root2}{root3}{shureq}"
             },
 
@@ -2709,56 +2649,56 @@ pealim = {
 
         "atid":{
 
-            ("אכנס"):{
+            "אכנס":{
             "ani":f"{alef}{root1}{root2}{root3}",
 
-            ("תיכנס"):{
+            "תיכנס":{
             "ata":f"{tav_with_mapik}{yod}{root1}{root2}{root3}",
 
-            ("תיכנסי"):{
+            "תיכנסי":{
             "at":f"{tav_with_mapik}{yod}{root1}{root2}{root3}{xiriq}{yod}",
 
-            ("ייכנס"):{
+            "ייכנס":{
             "hu":f"{yod}{yod}{root1}{root2}{root3}",
 
-            ("תיכנס"):{
+            "תיכנס":{
             "hi":f"{tav_with_mapik}{yod}{root1}{root2}{root3}",
 
-            ("ניכנס"):{
+            "ניכנס":{
             "anaxnu":f"{nun}{yod}{root1}{root2}{root3}",
 
-            ("תיכנסו"):{
+            "תיכנסו":{
             "atem":f"{tav_with_mapik}{yod}{root1}{root2}{root3}{shureq}",
 
-            ("תיכנסו"):{
+            "תיכנסו":{
             "aten":f"{tav_with_mapik}{yod}{root1}{root2}{root3}{shureq}",
 
-            ("ייכנסו"):{
+            "ייכנסו":{
             "hem":f"{yod}{yod}{root1}{root2}{root3}{shureq}",
 
-            ("ייכנסו"):{
+            "ייכנסו":{
             "hen":f"{yod}{yod}{root1}{root2}{root3}{shureq}",
 
 
 
     "pey_yod":
         "hoveh"
-            ("נולד",): {
+            "נולד": {
             "aniz": f"{nun}{xolammalei}{root1}{root2}",
             "ata": f"{nun}{xolammalei}{root1}{root2}",
             "hu": f"{nun}{xolammalei}{root1}{root2}",},
 
-            ("נולדת",): {
+            "נולדת": {
             "anin": f"{nun}{xolammalei}{root1}{root2}{tav}",
             "at": f"{nun}{xolammalei}{root1}{root2}{tav}",
             "hi": f"{nun}{xolammalei}{root1}{root2}{tav}",},
 
-            ("נולדים",): {
+            "נולדים": {
             "anaxnuz": f"{nun}{xolammalei}{root1}{root2}{xiriq}{yod}{memsofit}",
             "atem": f"{nun}{xolammalei}{root1}{root2}{xiriq}{yod}{memsofit}",
             "hem": f"{nun}{xolammalei}{root1}{root2}{xiriq}{yod}{memsofit}",},
 
-            ("נולדות",): {
+            "נולדות": {
             "anaxnun":f"{nun}{xolammalei}{root1}{root2}{xolammalei}{tav}",
             "aten":f"{nun}{xolammalei}{root1}{root2}{xolammalei}{tav}",
             "hen":f"{nun}{xolammalei}{root1}{root2}{xolammalei}{tav}",}
@@ -2767,36 +2707,36 @@ pealim = {
             },
 
         "avar":{
-            ("נולדתי",):{
+            "נולדתי":{
             "ani":f"{nun}{xolammalei}{root2}{root3}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("נולדת",):{
+            "נולדת":{
             "ata":f"{nun}{xolammalei}{root2}{root3}{tav_with_mapik}{qametz}"
             },
-            ("נולדת"):{
+            "נולדת":{
             "at":f"{nun}{xolammalei}{root2}{root3}{tav_with_mapik}{shva}"
             },
-            ("נולד"):{
+            "נולד":{
             "hu":f"{nun}{xolammalei}{root2}{root3}"
 
             },
-            ("נולדה"):{
+            "נולדה":{
             "hi":f"{nun}{xolammalei}{root2}{root3}{hey}"
             },
-            ("נולדנו"):{
+            "נולדנו":{
             "anaxnu":f"{nun}{xolammalei}{root2}{root3}{nun}{shureq}"
             },
-            ("נולדתם"):{
+            "נולדתם":{
             "atem":f"{nun}{xolammalei}{root2}{root3}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("נולדתן"):{
+            "נולדתן":{
             "aten":f"{nun}{xolammalei}{root2}{root3}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("נולדו"):{
+            "נולדו":{
             "hem":f"{nun}{xolammalei}{root2}{root3}{shureq}"
             },
-            ("נולדו"):{
+            "נולדו":{
             "hen":f"{nun}{xolammalei}{root2}{root3}{shureq}"
             },
 
@@ -2804,56 +2744,56 @@ pealim = {
 
         "atid":{
 
-            ("אוולד"):{
-            "ani":f"",
+            "אוולד":{
+            "ani":f"{alef}",
 
-            ("תיוולד"):{
+            "תיוולד":{
             "ata":f"",
 
-            ("תיוולדי"):{
+            "תיוולדי":{
             "at":f"",
 
-            ("ייוולד"):{
+            "ייוולד":{
             "hu":f"",
 
-            ("תיוולד"):{
+            "תיוולד":{
             "hi":f","
 
-            ("ניוולד"):{
+            "ניוולד":{
             "anaxnu":f"",
 
-            ("תיוולדו"):{
+            "תיוולדו":{
             "atem":f"",
 
-            ("תיוולדו"):{
+            "תיוולדו":{
             "aten":f"",
 
-            ("ייוולדו"):{
+            "ייוולדו":{
             "hem":f"",
 
-            ("ייוולדו "):{
+            "ייוולדו ":{
             "hen":f"",
 
 
 
     "lamed_hey_yod":
         "hoveh":
-            ("נראה",): {
+            "נראה": {
             "aniz": f"{nun}{xiriq}{root1}{root2}{hey}",
             "ata": f"{nun}{xiriq}{root1}{root2}{hey}",
             "hu": f"{nun}{xiriq}{root1}{root2}{hey}",},
 
-            ("נראית",): {
+            "נראית": {
             "anin": f"{nun}{xiriq}{root1}{root2}{yod}{tav}",
             "at": f"{nun}{xiriq}{root1}{root2}{yod}{tav}",
             "hi":f"{nun}{xiriq}{root1}{root2}{yod}{tav}",},
 
-            ("נראים",): {
+            "נראים": {
             "anaxnuz": f"{nun}{xiriq}{root1}{root2}{xiriq}{yod}{memsofit}",
             "atem": f"{nun}{xiriq}{root1}{root2}{xiriq}{yod}{memsofit}",
             "hem": f"{nun}{xiriq}{root1}{root2}{xiriq}{yod}{memsofit}",},
 
-            ("נראות",): {
+            "נראות": {
             "anaxnun":f"{nun}{xiriq}{root1}{root2}{xolammalei}{tav}",
             "aten":f"{nun}{xiriq}{root1}{root2}{xolammalei}{tav}",
             "hen":f"{nun}{xiriq}{root1}{root2}{xolammalei}{tav}",}
@@ -2862,91 +2802,91 @@ pealim = {
             },
 
         "avar":{
-            ("נראיתי",):{
+            "נראיתי":{
             "ani":f"{nun}{xiriq}{root1}{root2}{yod}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("נראית",):{
+            "נראית":{
             "ata":f"{nun}{xiriq}{root1}{root2}{yod}{tav_with_mapik}{qametz}"
             },
-            ("נראית"):{
+            "נראית":{
             "at":f"{nun}{xiriq}{root1}{root2}{yod}{tav_with_mapik}{shva}"
             },
-            ("נראה"):{
+            "נראה":{
             "hu":f"{nun}{xiriq}{root1}{root2}{hey}"
 
             },
-            ("נראתה"):{
+            "נראתה":{
             "hi":f"{nun}{xiriq}{root1}{root2}{tav}{hey}"
             },
-            ("נראינו"):{
+            "נראינו":{
             "anaxnu":f"{nun}{xiriq}{root1}{root2}{yod}{nun}{shureq}"
             },
-            ("נראיתם"):{
+            "נראיתם":{
             "atem":f"{nun}{xiriq}{root1}{root2}{yod}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("נראיתן"):{
+            "נראיתן":{
             "aten":f"{nun}{xiriq}{root1}{root2}{yod}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("נראו"):{
+            "נראו":{
             "hem":f"{nun}{xiriq}{root1}{root2}{shureq}"
             },
-            ("נראו"):{
+            "נראו":{
             "hen":f"{nun}{xiriq}{root1}{root2}{shureq}"
             },
 
 
         "atid":{
 
-            ("איראה"):{
+            "איראה":{
             "ani":f"",
 
-            ("תיראה"):{
+            "תיראה":{
             "ata":f"{tav_with_mapik}{yod}{root1}{root2}{hey}",
 
-            ("תיראי"):{
+            "תיראי":{
             "at":f"{tav_with_mapik}{yod}{root1}{root2}{xiriq}{yod}",
 
-            ("ייראה"):{
+            "ייראה":{
             "hu":f"{yod}{yod}{root1}{root2}{hey}",
 
-            ("תיראה"):{
+            "תיראה":{
             "hi":f"{tav_with_mapik}{yod}{root1}{root2}{hey}",
 
-            ("ניראה"):{
+            "ניראה":{
             "anaxnu":f"{nun}{yod}{root1}{root2}{hey}",
 
-            ("תיראו"):{
+            "תיראו":{
             "atem":f"{tav_with_mapik}{yod}{root1}{root2}{shureq}",
 
-            ("תיראו"):{
+            "תיראו":{
             "aten":f"{tav_with_mapik}{yod}{root1}{root2}{shureq}",
 
-            ("ייראו"):{
+            "ייראו":{
             "hem":f"{yod}{yod}{root1}{root2}{shureq}",
 
-            ("ייראו"):{
+            "ייראו":{
             "hen":f"{yod}{yod}{root1}{root2}{shureq}",
 
 
     "lamed_alef":
         "hoveh":
-            ("נמצא",): {
+            "נמצא": {
             "aniz": f"{nun}{xiriq}{root1}{root2}{alef}",
             "ata": f"{nun}{xiriq}{root1}{root2}{alef}",
             "hu": f"{nun}{xiriq}{root1}{root2}{alef}",},
 
-            ("נמצאת",): {
+            "נמצאת": {
             "anin": f"{nun}{xiriq}{root1}{root2}{alef}{tav}",
             "at": f"{nun}{xiriq}{root1}{root2}{alef}{tav}",
             "hi": f"{nun}{xiriq}{root1}{root2}{alef}{tav}",},
 
-            ("נמצאים",): {
+            "נמצאים": {
             "anaxnuz": f"{nun}{xiriq}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",
             "atem": f"{nun}{xiriq}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",
             "hem": f"{nun}{xiriq}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",},
 
-            ("נמצאות",): {
+            "נמצאות": {
             "anaxnun":f"{nun}{xiriq}{root1}{root2}{alef}{xolammalei}{tav}",
             "aten":f"{nun}{xiriq}{root1}{root2}{alef}{xolammalei}{tav}",
             "hen":f"{nun}{xiriq}{root1}{root2}{alef}{xolammalei}{tav}",}
@@ -2955,36 +2895,36 @@ pealim = {
             },
 
         "avar":{
-            ("נמצאתי",):{
+            "נמצאתי":{
             "ani":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{xiriq}{yod}"
             }
             ,
-            ("נמצאצת",):{
+            "נמצאצת":{
             "ata":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{qametz}"
             },
-            ("נמצאת"):{
+            "נמצאת":{
             "at":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{shva}"
             },
-            ("נמצא"):{
+            "נמצא":{
             "hu":f"{nun}{xiriq}{root1}{root2}{alef}"
 
             },
-            ("נמצאה"):{
+            "נמצאה":{
             "hi":f"{nun}{xiriq}{root1}{root2}{alef}{hey}"
             },
-            ("נמצאנו"):{
+            "נמצאנו":{
             "anaxnu":f"{nun}{xiriq}{root1}{root2}{alef}{nun}{shureq}"
             },
-            ("נמצאתם"):{
+            "נמצאתם":{
             "atem":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{segol}{memsofit}"
             },
-            ("נמצאתן"):{
+            "נמצאתן":{
             "aten":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{segol}{nunsofit}"
             },
-            ("נמצאו"):{
+            "נמצאו":{
             "hem":f"{nun}{xiriq}{root1}{root2}{alef}{shureq}"
             },
-            ("נמצאו"):{
+            "נמצאו":{
             "hen":f"{nun}{xiriq}{root1}{root2}{alef}{shureq}"
             },
 
@@ -2992,64 +2932,41 @@ pealim = {
 
         "atid":{
 
-            ("אימצא"):{
+            "אימצא":{
             "ani":f"",
 
-            ("תימצא"):{
+            "תימצא":{
             "ata":f"{tav_with_mapik}{yod}{root1}{root2}{alef}",
 
-            ("תימצאי"):{
+            "תימצאי":{
             "at":f"{tav_with_mapik}{yod}{root1}{root2}{alef}{xiriq}{yod}",
 
-            ("יימצא"):{
+            "יימצא":{
             "hu":f"{yod}{yod}{root1}{root2}{alef}",
 
-            ("תימצא"):{
+            "תימצא":{
             "hi":f"{tav_with_mapik}{yod}{root1}{root2}{alef}",
 
-            ("נימצא"):{
+            "נימצא":{
             "anaxnu":f"{nun}{yod}{root1}{root2}{alef}",
 
-            ("תימצאו"):{
+            "תימצאו":{
             "atem":f"{tav_with_mapik}{yod}{root1}{root2}{alef}{shureq}",
 
-            ("תימצאו"):{
+            "תימצאו":{
             "aten":f"{tav_with_mapik}{yod}{root1}{root2}{alef}{shureq}",
 
-            ("יימצאו"):{
+            "יימצאו":{
             "hem":f"{yod}{yod}{root1}{root2}{alef}{shureq}",
 
-            ("יימצאו"):{
+            "יימצאו":{
             "hen":f"{yod}{yod}{root1}{root2}{alef}{shureq}",
 
 
 
 
 
-"pual":
-"hoveh":
-("מכותב",): {
-"ani": f"{nun}{xiriq}{root1}{root2}{alef}",
-"ata": f"{nun}{xiriq}{root1}{root2}{alef}",
-"hu": f"{nun}{xiriq}{root1}{root2}{alef}",},
 
-("מכותבת",): {
-"ani": f"{nun}{xiriq}{root1}{root2}{alef}{tav}",
-"at": f"{nun}{xiriq}{root1}{root2}{alef}{tav}",
-"hi": f"{nun}{xiriq}{root1}{root2}{alef}{tav}",},
-
-("מכותבים",): {
-"anaxnu": f"{nun}{xiriq}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",
-"atem": f"{nun}{xiriq}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",
-"hem": f"{nun}{xiriq}{root1}{root2}{alef}{xiriq}{yod}{memsofit}",},
-
-("מכותבות",): {
-"anaxnu":f"{nun}{xiriq}{root1}{root2}{alef}{xolammalei}{tav}",
-"aten":f"{nun}{xiriq}{root1}{root2}{alef}{xolammalei}{tav}",
-"hen":f"{nun}{xiriq}{root1}{root2}{alef}{xolammalei}{tav}",}
-}
-
-},
 #maybe make regex for pual and hufal
 
 
@@ -3097,73 +3014,7 @@ pealim = {
 
 
 
-"avar":{
-("",):{
-"ani":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{xiriq}{yod}"
-}
-,
-("נמצאצת",):{
-"ata":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{qametz}"
-},
-("נמצאת"):{
-"at":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{shva}"
-},
-("נמצא"):{
-"hu":f"{nun}{xiriq}{root1}{root2}{alef}"
 
-},
-("נמצאה"):{
-"hi":f"{nun}{xiriq}{root1}{root2}{alef}{hey}"
-},
-("נמצאנו"):{
-"anaxnu":f"{nun}{xiriq}{root1}{root2}{alef}{nun}{shureq}"
-},
-("נמצאתם"):{
-"atem":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{segol}{memsofit}"
-},
-("נמצאתן"):{
-"aten":f"{nun}{xiriq}{root1}{root2}{alef}{tav_with_mapik}{segol}{nunsofit}"
-},
-("נמצאו"):{
-"hem":f"{nun}{xiriq}{root1}{root2}{alef}{shureq}"
-},
-("נמצאו"):{
-"hen":f"{nun}{xiriq}{root1}{root2}{alef}{shureq}"
-},
-}
-
-
-"atid":{
-
-("אימצא"):{
-"ani":f"",
-
-("תימצא"):{
-"ata":f"{tav_with_mapik}{yod}{root1}{root2}{alef}",
-
-("תימצאי"):{
-"at":f"{tav_with_mapik}{yod}{root1}{root2}{alef}{xiriq}{yod}",
-
-("יימצא"):{
-"hu":f"{yod}{yod}{root1}{root2}{alef}",
-
-("תימצא"):{
-"hi":f"{tav_with_mapik}{yod}{root1}{root2}{alef}",
-
-("נימצא"):{
-"anaxnu":f"{nun}{yod}{root1}{root2}{alef}",
-
-("תימצאו"):{
-"atem":f"{tav_with_mapik}{yod}{root1}{root2}{alef}{shureq}",
-
-("תימצאו"):{
-"aten":f"{tav_with_mapik}{yod}{root1}{root2}{alef}{shureq}",
-
-("יימצאו"):{
-"hem":f"{yod}{yod}{root1}{root2}{alef}{shureq}",
-
-("יימצאו"):{
-"hen":f"{yod}{yod}{root1}{root2}{alef}{shureq}",
 
 #hufal
 
@@ -3218,6 +3069,8 @@ special_shoreshim = {
 }
 
 
+
+
 def detect_mishkal(shoresh, binyan):
     for mishkal, regex in special_shoreshim.items():
         if re.match(regex, shoresh):
@@ -3233,46 +3086,62 @@ def detect_mishkal(shoresh, binyan):
         if re.match(regex, shoresh):
             return mishkal
 
+
+
+#make a chat bot interface for the root #constructs would be in the value of the dictionary for them to choose from
+
+
+
 def render_conjugate (shoresh, binyan, zman, shem_guf):
     mishkal = detect_mishkal(shoresh, binyan)
+    # Handle mishkalim from pealim dictionary
+    if binyan in pealim and zman in pealim[binyan] and mishkal in pealim[binyan][zman]:
+        root1 = shoresh[0]
+        root2 = shoresh[1]
+        root3 = shoresh[2]
+        root4 = shoresh[3]
 
-root1 = shoresh[0]
-root2 = shoresh[1]
-root3 = shoresh[2]
-root4 = shoresh[3]
+        conjugation = pealim[binyan][zman][mishkal][shem_guf]
+        return conjugation
+    else:
+        # Handle case where mishkal is not detected
+        pass
 
 
 
-alef = "U+05D0"
-nunsofit = "U+05DF"
-memsofit = "U+05DD"
-yod = "U+05D9"
-nun = "U+05E0"
-hey = "U+05D4"
-tav_with_mapik = "U+05EA U+05BC"
-vav = "U+05D5"
-tav = "U+05EA"
+
+alef = "u05D0",
+nunsofit = "u05DF"
+memsofit = "u05DD"
+yod = "u05D9"
+nun = "u05E0"
+hey = "u05D4"
+tav_with_mapik = "u05EA u05BC"
+vav = "u05D5"
+tav = "u05EA"
 
 #consider otiyot sofiyot
-shin_sin = "U+05E9"
-tzadi = "U+05E6"
-dalet = "U+05D3"
-tet = "U+05D8"
-samech = "U+05E1"
-zayin = "U+05D6"
+shin_sin = "u05E9"
+tzadi = "u05E6"
+dalet = "u05D3"
+tet = "u05D8"
+samech = "u05E1"
+zayin = "u05D6"
 
 
-dagesh = "U+05BC"
-mapik = ""
-xiriq = "U+05B4"
-qametz = "U+05B8"
-segol = "U+05B6"
-shureq = "U+05D5, U+05BC"
-xolammalei = "U+05D5, U+05B9"
+dagesh = "u05BC"
+mapik = "u05BC"
+xiriq = "u05B4"
+qametz = "u05B8"
+segol = "u05B6"
+shureq = "u05D5, u05BC"
+xolammalei = "u05D5, u05B9"
 xolam = ""
-patax = "U+05B7"
-shva = "U+05B0"
-tzerei = "U+05B5"
+patax = "u05B7"
+shva = "u05B0"
+tzerei = "u05B5"
+
+
 
 #need to make a regex to interpret input shoresh to which mishkal
 
