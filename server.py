@@ -1487,6 +1487,12 @@ def detect_mishkal(shoresh, binyan):
     return "shlemim"
 
 
+    #for mishkal, regex in special_shoreshim.items():
+        #if if binyan == "paal":
+            #re.match(r"^\u05DC\u05D1\u05E9$", "lamed_bet_shin"):
+            #return mishkal
+
+
 
 #make a chat bot interface for the root #constructs would be in the value of the dictionary for them to choose from
 
@@ -1613,7 +1619,7 @@ def render_conjugate (shoresh, binyan, zman, shem_guf):
 
 
 
-#for every ani in the atid and avar zman make it consistent to have aniz and anin 
+#for every ani in the atid and avar zman make it consistent to have aniz and anin
 
 #need to make a regex to interpret input shoresh to which mishkal
 
