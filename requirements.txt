@@ -1,3 +1,2 @@
-dj_database_url==2.1.0
-Django==5.0.4
-Flask==3.0.3
+Flask==3.0.2
+gunicorn==22.0.0
