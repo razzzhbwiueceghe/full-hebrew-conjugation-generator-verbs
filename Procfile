@@ -1,2 +1,2 @@
-release: cd frontend && npm run build && cd ..
+release: cd frontend && npm install && npm run build && cd ..
 web: gunicorn server:app
