@@ -1,17 +1,13 @@
 # Importing flask module in the project is mandatory
 # An object of Flask class is our WSGI application.
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 import re
 import os
 
 # Flask constructor takes the name of
 # current module (__name__) as argument.
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend/build')
 
-
-from flask import Flask, jsonify, request
-
-app = Flask(__name__)
 
 
 
@@ -1818,6 +1814,15 @@ def conjugate():
 @app.route('/parse', methods = ['POST'])
 def parse():
     return 'think about what variables i want to create below def'
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
+
 
 # main driver function
 if __name__ == '__main__':
