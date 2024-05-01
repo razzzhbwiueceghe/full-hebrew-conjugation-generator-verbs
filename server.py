@@ -1672,7 +1672,7 @@ def detect_mishkal(shoresh, binyan):
 #make a chat bot interface for the root #constructs would be in the value of the dictionary for them to choose from
 
 
-alef = "\u05D0",
+alef = "\u05D0"
 nunsofit = "\u05DF"
 memsofit = "\u05DD"
 yod = "\u05D9"
