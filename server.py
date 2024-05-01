@@ -1681,7 +1681,7 @@ tav_with_mapik = "\u05EA\u05BC"
 vav = "\u05D5"
 tav = "\u05EA"
 
-#consider otiyot sofiyot 
+#consider otiyot sofiyot
 shin_sin = "\u05E9"
 tzadi = "\u05E6"
 dalet = "\u05D3"
@@ -1823,7 +1823,7 @@ if __name__ == '__main__':
 
 	# run() method of Flask class runs the application
 	# on the local development server.
-	app.run()
+	app.run(port=33507)
 
 
 
