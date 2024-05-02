@@ -1649,7 +1649,7 @@ def detect_mishkal(shoresh, binyan):
             if re.match(regex, shoresh):
                 return mishkal
 
-    if binyan == "paal" and zman == "avar" or zman == "atid":
+    #if binyan == "paal" and zman == "avar" or zman == "atid":
 
 
     for mishkal, regex in mishkalim_more_specific.items():
