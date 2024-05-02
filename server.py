@@ -1648,6 +1648,10 @@ def detect_mishkal(shoresh, binyan):
         for mishkal, regex in mishkalim_hitpael.items():
             if re.match(regex, shoresh):
                 return mishkal
+
+    if binyan == "paal" and zman == "avar" or zman == "atid":
+
+
     for mishkal, regex in mishkalim_more_specific.items():
         if re.match(regex, shoresh):
             return mishkal
