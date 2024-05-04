@@ -10,19 +10,32 @@ app = Flask(__name__, static_folder='frontend/build')
 
 
 
+#hoveh הווה= present
+#avar עבר= past
+#atid עתיד= future
+# אני זכר(i masculine)
+#אני נקבה (i feminine)
+#אתה = you masculine
+#את = you feminine
+#הוא= he
+#היא = she
+#אנחנו זכר = we masculine
+#אנחנו נקבה = we feminine
+#אתם = you all masculine
+#אתן = you all feminine
+# הם = they masculine
+#הן= they feminiine
+
+#not all of the vowels at this stage are configured to be included for every conjugation of every pattern so please take in to account future updates in code
 
 
-#try to get to import all of the files into one dictionary
+#anin= ani nekeva (i feminine)
+#ani = both zachar or nekeva since there is no differentiation between masculine and feminine ani in past or future tenses
+#aniz = ani zachar ()
+#this is the same case for the 1st plural anaxnu
 
-
-
-
-#anin= ani nekeva
-#ani = both zachar or nekeva
-#aniz = ani zachar
-
-#mishkalim below with each binyan
-#consider to use regex instead of a bunch of dictionaries in consideration of efal and efol
+#mishkalim (meaning verbal construct patterns) below with each binyan( verbal construct)
+#consider to use regex instead of a bunch of dictionaries in consideration of efal and efol (efol and efal are phonological representations for the pattern of pronouncing the future tense for the paal binyan for the mishkal shlemim depending on the root letters and which position they occupy- this i am planning on also addressing in the future)
 
 pealim = {
 
@@ -1351,6 +1364,7 @@ pealim = {
             }
         }
     },
+    #note that i am still entering in for pual and hufal- but the five other contructs are premilinarily listed as options within the program binyan verb construct selection
     "pual":{
         "shlemim":{
             "hoveh":{
@@ -1649,7 +1663,7 @@ def detect_mishkal(shoresh, binyan):
             if re.match(regex, shoresh):
                 return mishkal
 
-    #if binyan == "paal" and zman == "avar" or zman == "atid":
+    #if binyan == "paal" and mishkal == "shlemim" (and zman == "avar" or zman == "atid"):
 
 
     for mishkal, regex in mishkalim_more_specific.items():
