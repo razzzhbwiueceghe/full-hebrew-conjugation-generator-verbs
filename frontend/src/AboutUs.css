@@ -1,0 +1,36 @@
+body {
+  background-color: #a1deff;
+  text-decoration: none;
+  
+}
+
+
+
+
+p {
+  font-family: 'Hiragino Maru Gothic ProN', sans-serif;
+  font-size: 15px;
+  color: #5a392f;
+
+}
+
+
+h2{
+  font-family: 'Hiragino Maru Gothic ProN', sans-serif;
+  color: #5a392f;
+
+}
+
+h3{
+  font-family: 'Hiragino Maru Gothic ProN', sans-serif;
+  color: #5a392f;
+  font-size: 15px;
+}
+
+
+
+a{
+    color: #5a392f;
+    text-decoration: none;
+    font-size: 15px;
+}
