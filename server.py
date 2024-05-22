@@ -10,32 +10,19 @@ app = Flask(__name__, static_folder='frontend/build')
 
 
 
-#hoveh הווה= present
-#avar עבר= past
-#atid עתיד= future
-# אני זכר(i masculine)
-#אני נקבה (i feminine)
-#אתה = you masculine
-#את = you feminine
-#הוא= he
-#היא = she
-#אנחנו זכר = we masculine
-#אנחנו נקבה = we feminine
-#אתם = you all masculine
-#אתן = you all feminine
-# הם = they masculine
-#הן= they feminiine
-
-#not all of the vowels at this stage are configured to be included for every conjugation of every pattern so please take in to account future updates in code
 
 
-#anin= ani nekeva (i feminine)
-#ani = both zachar or nekeva since there is no differentiation between masculine and feminine ani in past or future tenses
-#aniz = ani zachar ()
-#this is the same case for the 1st plural anaxnu
+#try to get to import all of the files into one dictionary
 
-#mishkalim (meaning verbal construct patterns) below with each binyan( verbal construct)
-#consider to use regex instead of a bunch of dictionaries in consideration of efal and efol (efol and efal are phonological representations for the pattern of pronouncing the future tense for the paal binyan for the mishkal shlemim depending on the root letters and which position they occupy- this i am planning on also addressing in the future)
+
+
+
+#anin= ani nekeva
+#ani = both zachar or nekeva
+#aniz = ani zachar
+
+#mishkalim below with each binyan
+#consider to use regex instead of a bunch of dictionaries in consideration of efal and efol
 
 pealim = {
 
@@ -70,6 +57,51 @@ pealim = {
             },
 
             "atid":{
+                "ani":"{alef}{segol}{root1}{shva}{root2}{xolammalei}{root3}",
+                "ata":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
+                "at":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
+                "hu":"{yod}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
+                "hi":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
+                "anaxnu":"{nun}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
+                "atem":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
+                "aten":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
+                "hem":"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
+                "hen":"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
+            },
+
+        },
+
+        "efal":{
+            "hoveh":{
+                "aniz": "{root1}{xolammalei}{root2}{tzerei}{root3}",
+                "ata": "{root1}{xolammalei}{root2}{tzerei}{root3}",
+                "hu": "{root1}{xolammalei}{root2}{tzerei}{root3}",
+                "anin": "{root1}{olammalei}{root2}{segol}{root3}{segol}{tav}",
+                "at": "{root1}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+                "hi": "{root1}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+                "anaxnuz": "{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+                "atem": "{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+                "hem": "{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+                "anaxnun":"{root1}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
+                "aten":"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{tav}",
+                "hen":"{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{tav}"
+            },
+
+            "avar":{
+                "ani":"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}",
+                "ata":"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{qametz}",
+                "at":"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{shva}",
+                "hu":"{root1}{qametz}{root2}{patax}{root3}",
+                "hi":"{root1}{qametz}{root2}{shva}{root3}{qametz}{hey}",
+                "anaxnu":"{root1}{qametz}{root2}{patax}{root3}{shva}{nun}{shureq}",
+                "atem":"{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{segol}{memsofit}",
+                "aten":"{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{segol}{memsofit}",
+                "hem":"{root1}{qametz}{root2}{shva}{root3}{shureq}",
+                "hen":"{root1}{qametz}{root2}{shva}{root3}{shureq}",
+            },
+
+
+            "atid":{
                 "ani":"{alef}{segol}{root1}{shva}{root2}{patax}{root3}",
                 "ata":"{tav_with_mapik}{xiriq}{root1}{shva}{patax}{root3}",
                 "at":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
@@ -82,19 +114,6 @@ pealim = {
                 "hen":"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
             },
 
-
-            "efol":{
-                "ani":"{alef}{segol}{root1}{shva}{root2}{xolammalei}{root3}",
-                "ata":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
-                "at":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{xiriq}{yod}",
-                "hu":"{yod}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
-                "hi":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
-                "anaxnu":"{nun}{xiriq}{root1}{shva}{root2}{xolammalei}{root3}",
-                "atem":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
-                "aten":"{tav_with_mapik}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
-                "hem":"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
-                "hen":"{yod}{xiriq}{root1}{shva}{root2}{shva}{root3}{shureq}",
-            },
         },
 
         "lamed_hey_yod": {
@@ -1364,7 +1383,6 @@ pealim = {
             }
         }
     },
-    #note that i am still entering in for pual and hufal- but the five other contructs are premilinarily listed as options within the program binyan verb construct selection
     "pual":{
         "shlemim":{
             "hoveh":{
@@ -1614,7 +1632,7 @@ mishkalim_less_specific = {
     "ayin_vav": r"^[\u05D0-\u05EA]\u05D5[\u05D0-\u05EA]$",
     "ayin_yod": r"^[\u05D0-\u05EA]\u05D9[\u05D0-\u05EA]$",
     "lamed_alef": r"^[\u05D0-\u05EA][\u05D0-\u05EA]\u05D0$",
-    "lamed_hey_yod": r"^[\u05D0-\u05EA][\u05D0-\u05EA][\u05D9\u05E5]$",
+    "lamed_hey_yod": r"^[\u05D0-\u05EA][\u05D0-\u05EA][\u05D9\u05D4]$",
     "kapolim": r"^([\u05D0-\u05EA][\u05D0-\u05EA])\1$"
 
 }
@@ -1626,9 +1644,9 @@ mishkalim_more_specific = {
     "pey_nun_ayin_yod": r"^\u05E0\u05D9[\u05D0-\u05EA]$",
     "lamed_alef_ayin_vav": r"^\u05D5[\u05D0-\u05EA]\u05D0$",
     "lamed_alef_ayin_yod": r"^\u05D9[\u05D0-\u05EA]\u05D0$",
-    "ayin_vav_lamed_hey_yod": r"^[\u05D0-\u05EA]\u05D5[\u05D9\u05E5]$",
-    "ayin_yod_lamed_hey_yod": r"^[\u05D0-\u05EA]\u05D9[\u05D9\u05E5]$",
-    "efal": r"^[\u05D0-\u05EA][u05D0\u05D4\u05D7\u05E2][u05D0\u05D7\u05E2]$"
+    "ayin_vav_lamed_hey_yod": r"^[\u05D0-\u05EA]\u05D5[\u05D9\u05D4]$",
+    "ayin_yod_lamed_hey_yod": r"^[\u05D0-\u05EA]\u05D9[\u05D9\u05D4]$",
+    "efal": r"^[\u05D0-\u05EA](?:([\u05D0\u05D4\u05D7\u05E2][\u05D0-\u05D3\u05D6-\u05D8\u05DA-\u05EA])|([\u05D0-\u05D4\u05D6-\u05D8\u05DA-\u05EA][\u05D0\u05D7\u05E2]))$"
 }
 
 mishkalim_hitpael = {
@@ -1646,8 +1664,8 @@ special_shoreshim = {
     "alef_vav_hey": r"^\u05D0\u05D5\u05D4$",
 
     "lamed_bet_shin": r"^\u05DC\u05D1\u05E9$",
-    "lamed_mem_dalet": r"^\u05DC\u05DE\u05D3",
-    "shin_kaf_bet": r"^\u05E9\u05DB\u05D1"
+    "lamed_mem_dalet": r"^\u05DC\u05DE\u05D3$",
+    "shin_kaf_bet": r"^\u05E9\u05DB\u05D1$"
 
 }
 
@@ -1663,8 +1681,6 @@ def detect_mishkal(shoresh, binyan):
             if re.match(regex, shoresh):
                 return mishkal
 
-    #if binyan == "paal" and mishkal == "shlemim" (and zman == "avar" or zman == "atid"):
-
 
     for mishkal, regex in mishkalim_more_specific.items():
         if re.match(regex, shoresh):
@@ -1675,10 +1691,6 @@ def detect_mishkal(shoresh, binyan):
     return "shlemim"
 
 
-    #for mishkal, regex in special_shoreshim.items():
-        #if if binyan == "paal":
-            #re.match(r"^\u05DC\u05D1\u05E9$", "lamed_bet_shin"):
-            #return mishkal
 
 
 
@@ -1720,6 +1732,10 @@ tzeirei = "\u05B5"
 def render_conjugate (shoresh, binyan, zman, shem_guf):
     mishkal = detect_mishkal(shoresh, binyan)
     # Handle mishkalim from pealim dictionary
+
+    if binyan in pealim and mishkal not in pealim[binyan]:
+        mishkal = "shlemim"
+        #by default we use shlemim- this is a feature for efol special shoreshim
     if binyan in pealim and mishkal in pealim[binyan] and zman in pealim[binyan][mishkal]:
         root1 = shoresh[0]
         root2 = shoresh[1]
@@ -1797,7 +1813,11 @@ def render_conjugate (shoresh, binyan, zman, shem_guf):
                 final_ans += shureq
 
 
-
+        final_ans = re.sub(r"\u05DE$", "\u05DD", final_ans)
+        final_ans = re.sub(r"\u05E0$", "\u05DF", final_ans)
+        final_ans = re.sub(r"\u05E4$", "\u05E3", final_ans)
+        final_ans = re.sub(r"\u05E6$", "\u05E5", final_ans)
+        final_ans = re.sub(r"\u05DB$", "\u05DA", final_ans)
         return final_ans
     else:
         # Handle case where mishkal is not detected
