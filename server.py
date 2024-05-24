@@ -251,28 +251,28 @@ pealim = {
                 "aniz": "{root1}{xolammalei}{root2}{tzerei}{root3}",
                 "ata": "{root1}{xolammalei}{root2}{tzerei}{root3}",
                 "hu": "{root1}{xolammalei}{root2}{tzerei}{root3}",
-                "anin": "",
-                "at": "",
-                "hi": "",
-                "anaxnuz": "",
-                "atem": "",
-                "hem": "",
-                "anaxnun":"",
-                "aten":"",
-                "hen":"",
+                "anin": "{root1}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+                "at": "{root1}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+                "hi": "{root1}{xolammalei}{root2}{segol}{root3}{segol}{tav}",
+                "anaxnuz": "{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+                "atem": "{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+                "hem": "{root1}{xolammalei}{root2}{shva}{root3}{xiriq}{yod}{memsofit}",
+                "anaxnun":"{root1}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
+                "aten":"{root1}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
+                "hen":"{root1}{xolammalei}{root2}{shva}{root3}{xolammalei}{tav}",
             },
 
             "avar":{
-                "ani":"",
-                "ata":"",
-                "at":"",
-                "hu":"",
-                "hi":"",
-                "anaxnu":"",
-                "atem":"",
-                "aten":"",
-                "hem":"",
-                "hen":""
+                "ani":"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}",
+                "ata":"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{qametz}",
+                "at":"{root1}{qametz}{root2}{patax}{root3}{shva}{tav_with_mapik}{shva}",
+                "hu":"{root1}{qametz}{root2}{patax}{root3}",
+                "hi":"{root1}{qametz}{root2}{patax}{root3}{qametz}{hey}",
+                "anaxnu":"{root1}{qametz}{root2}{patax}{root3}{shva}{nun}{shureq}",
+                "atem":"{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{segol}{memsofit}",
+                "aten":"{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{segol}{nunsofit}",
+                "hem":"{root1}{shva}{root2}{shva}{root3}{shureq}",
+                "hen":"{root1}{shva}{root2}{shva}{root3}{shureq}"
             },
 
             "atid":{
@@ -556,31 +556,31 @@ pealim = {
     "hifil":{
         "shlemim":{
             "hoveh":{
-                "aniz": "",
-                "ata": "",
-                "hu": "",
-                "anin": "",
-                "at": "",
-                "hi": "",
-                "anaxnuz": "",
-                "atem": "",
-                "hem": "",
-                "anaxnun":"",
-                "aten":"",
-                "hen":""
+                "aniz": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}",
+                "ata": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}",
+                "hu": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}",
+                "anin": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{qametz}{hey}",
+                "at": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{qametz}{hey}",
+                "hi": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{qametz}{hey}",
+                "anaxnuz": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
+                "atem": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
+                "hem": "{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{xiriq}{yod}{memsofit}",
+                "anaxnun":"{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
+                "aten":"{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}",
+                "hen":"{mem}{patax}{root1}{shva}{root2}{xiriq}{yod}{root3}{xolammalei}{tav}"
             },
 
             "avar":{
-                "ani":"",
-                "ata":"",
-                "at":"",
-                "hu":"",
-                "hi":"",
-                "anaxnu":"",
-                "atem":"",
-                "aten":"",
-                "hem":"",
-                "hen":""
+                "ani":"{hey}{xiriq}{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{xiriq}{yod}",
+                "ata":"{hey}{xiriq}{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{qametz}",
+                "at":"{hey}{xiriq}{root1}{shva}{root2}{patax}{root3}{shva}{tav_with_mapik}{shva}",
+                "hu":"{hey}{xiriq}{root1}{shva}{root2}{xiriq}{yod}{root3}",
+                "hi":"{hey}{xiriq}{root1}{shva}{root2}{xiriq}{yod}{root3}{qametz}{hey}",
+                "anaxnu":"{hey}{xiriq}{root1}{shva}{root2}{patax}{root3}{shva}{nun}{shureq}",
+                "atem":"{hey}{xiriq}{root1}{shva}{root2}{patax}{root3}{tav_with_mapik}{segol}{memsofit}",
+                "aten":"{hey}{xiriq}{root1}{shva}{root2}{patax}{root3}{tav_with_mapik}{segol}{nunsofit}",
+                "hem":"{hey}{xiriq}{root1}{shva}{root2}{xiriq}{yod}{root3}{shureq}",
+                "hen":"{hey}{xiriq}{root1}{shva}{root2}{xiriq}{yod}{root3}{shureq}"
             },
 
             "atid":{
@@ -1284,16 +1284,16 @@ pealim = {
             },
 
             "atid": {
-                "ani":"{alef}",
-                "ata":"",
-                "at":"",
-                "hu":"",
-                "hi":"",
-                "anaxnu":"",
-                "atem":"",
-                "aten":"",
-                "hem":"",
-                "hen":""
+                "ani":"{alef}{segol}{shureq}{qametz}{root2}{tzeirei}{root3}",
+                "ata":"{tav_with_mapik}{xiriq}{yod}{shureq}{qametz}{root2}{tzeirei}{root3}",
+                "at":"{tav_with_mapik}{xiriq}{yod}{shureq}{qametz}{root2}{shva}{root3}{xiriq}{yod}",
+                "hu":"{yod}{xiriq}{yod}{shureq}{qametz}{root2}{tzeirei}{root3}",
+                "hi":"{tav_with_mapik}{xiriq}{yod}{shureq}{qametz}{root2}{tzeirei}{root3}",
+                "anaxnu":"{nun}{xiriq}{yod}{shureq}{qametz}{root2}{tzeirei}{root3}",
+                "atem":"{tav_with_mapik}{xiriq}{yod}{shureq}{qametz}{root2}{shva}{root3}{shureq}",
+                "aten":"{tav_with_mapik}{xiriq}{yod}{shureq}{qametz}{root2}{shva}{root3}{shureq}",
+                "hem":"{yod}{xiriq}{yod}{shureq}{qametz}{root2}{shva}{root3}{shureq}",
+                "hen":"{yod}{xiriq}{yod}{shureq}{qametz}{root2}{shva}{root3}{shureq}"
             }
         },
 
