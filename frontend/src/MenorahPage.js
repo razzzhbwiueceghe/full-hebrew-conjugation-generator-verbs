@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Menorah from './Menorah.js';
+import ConjugatedTable from './ConjugatedTable.js';
 
 const binyanim = [
   'nifal',
@@ -10,6 +11,15 @@ const binyanim = [
   'piel',
   'paal',
 ];
+
+const sampleBatchConjugation = [
+  {
+    "binyan": "paal",
+    "outputword": "\u05db\u05d5\u05b9\u05ea\u05d1",
+    "shoresh": "\u05db\u05ea\u05d1",
+    "zman": "hoveh"
+}
+]
 
 function MenorahPage(){
 
@@ -22,6 +32,8 @@ function MenorahPage(){
       <div>
         {binyanim[selectedArch]}
       </div>
+      <ConjugatedTable />
+
     </div>
   );
 }
