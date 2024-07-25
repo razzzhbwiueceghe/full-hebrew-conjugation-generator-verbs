@@ -6,7 +6,7 @@ function AboutUs(){
   return (
     <div className="aboutus">
     <h2>About Shorazim
-    <p> Shorazim (2024) is a Modern Hebrew learning tool created by Washington Univeristy in St. Louis undergraduate junior, Jack Harris. "Shorazim" is a play-on-words of the Hebrew word "שׁוֹרָשִׁים" (/ʃoʁaʃim/) meaning "roots" and Jack's Hebrew name "רָזִי" (/ʁazi/), together creating "שׁוֹרָזִים" (/ʃoʁazim/).
+    <p> Shorazim (June 2024) is a Modern Hebrew learning tool created by Washington Univeristy in St. Louis undergraduate junior, Jack Harris. "Shorazim" is a play-on-words of the Hebrew word "שׁוֹרָשִׁים" (/ʃoʁaʃim/) meaning "roots" and Jack's Hebrew name "רָזִי" (/ʁazi/), together creating "שׁוֹרָזִים" (/ʃoʁazim/).
     Originally created for Jack's Computational Linguistics Course, taught by Dr. Nick Danis, Shorazim includes the following language learning features: a conjugator tool for any entered root sequence, as well as a reverse verb parser with the input being any inflected form;
     additional features are being programmed to be added in the future, where additional site updates and web developments also will be made. This project would not be possible without the help of Nik Frank from
 

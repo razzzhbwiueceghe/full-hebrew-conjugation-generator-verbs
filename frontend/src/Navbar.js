@@ -36,6 +36,9 @@ function Navbar() {
               <Link to='/conjugator' className={'navLink'}>Conjugator</Link>
             </li>
             <li onClick={removeActive}>
+              <Link to='/menorah' className={'navLink'}>Menorah</Link>
+            </li>
+            <li onClick={removeActive}>
               <Link to='/verbparser' className={'navLink'}>Verb Parser</Link>
             </li>
           </ul>

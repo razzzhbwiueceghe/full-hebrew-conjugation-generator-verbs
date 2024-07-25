@@ -1,0 +1,32 @@
+svg.menorah {
+    width: 393px;
+    height: 326px;
+}
+
+.outer-arch {
+    fill: none;
+    stroke: #750E21;
+    stroke-width: 17.6482;
+}
+
+.middle-arch {
+    fill: none;
+    stroke: #E3651D;
+    stroke-width: 17.6482;
+}
+
+.inner-arch {
+    fill: none;
+    stroke: #BED754;
+    stroke-width: 17.6482;
+}
+
+.shamash {
+    fill: none;
+    stroke: #E9FF97;
+    stroke-width: 17.6482;
+}
+
+.candles .active {
+    fill: #ffcc00;
+}

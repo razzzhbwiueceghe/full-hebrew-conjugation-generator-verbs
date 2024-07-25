@@ -3,6 +3,7 @@ import React from 'react';
 import Conjugate from './Conjugate.js';
 import AboutUs from './AboutUs.js';
 import Navbar from './Navbar.js';
+import MenorahPage from './MenorahPage.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +16,7 @@ import {
 
 
 function App(){
-  //this where are user log in logic will go
-  //network cache would also go here
+ 
 
   return (
     <Router>
@@ -24,6 +24,9 @@ function App(){
       <Switch>
         <Route path="/conjugator">
           <Conjugate />
+          </Route>
+        <Route path="/menorah">
+          <MenorahPage />
         </Route>
         <Route path="/aboutus">
           <AboutUs />
